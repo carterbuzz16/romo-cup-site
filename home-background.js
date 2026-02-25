@@ -1,5 +1,5 @@
 const homeBackgroundCandidates = [
-  "assets/IMG_4663.png",
+  "assets/blue romo cup.png",
   "assets/IMG_5206.jpg",
   "assets/home-background.jpg",
   "assets/home-background.jpeg",

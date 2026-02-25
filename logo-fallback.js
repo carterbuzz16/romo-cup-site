@@ -1,6 +1,6 @@
 const logoCandidates = [
   "assets/IMG_5206.jpg",
-  "assets/IMG_4663.png",
+  "assets/blue romo cup.png",
   "assets/romo-cup-logo.png",
   "assets/romo-cup-logo.jpg",
   "assets/romo-cup-logo.jpeg",
