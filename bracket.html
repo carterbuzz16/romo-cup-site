@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Romo Cup | Bracket</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="logo-fallback.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand-wrap" href="index.html" aria-label="The Romo Cup home">
+            <img
+              class="brand-logo logo-image"
+              src="assets/IMG_5206.jpg"
+              alt="The Romo Cup logo"
+            />
+            <p class="brand-title">The Romo Cup</p>
+          </a>
+          <ul class="nav-list">
+            <li><a href="index.html">Donate</a></li>
+            <li><a href="about.html">About Romo</a></li>
+            <li><a href="teams.html">The Teams</a></li>
+            <li><a href="bracket.html" aria-current="page">Bracket</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card reveal">
+          <h1>Romo Cup Bracket</h1>
+          <p>
+            Placeholder bracket is set with all current teams. Update seeds,
+            matchups, and winners as the tournament bracket is finalized.
+          </p>
+        </section>
+
+        <section class="section card reveal">
+          <div class="bracket-grid">
+            <article>
+              <h3>Quarterfinals</h3>
+              <div class="bracket-round">
+                <div class="match-card">
+                  <p><strong>Game 1</strong></p>
+                  <p>Seed 1: ATO</p>
+                  <p>Seed 8: SAE</p>
+                </div>
+                <div class="match-card">
+                  <p><strong>Game 2</strong></p>
+                  <p>Seed 4: Fiji</p>
+                  <p>Seed 5: Phi Delt</p>
+                </div>
+                <div class="match-card">
+                  <p><strong>Game 3</strong></p>
+                  <p>Seed 3: Sigma Nu</p>
+                  <p>Seed 6: Lamda Chi</p>
+                </div>
+                <div class="match-card">
+                  <p><strong>Game 4</strong></p>
+                  <p>Seed 2: KA</p>
+                  <p>Seed 7: Farmhouse</p>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <h3>Semifinals</h3>
+              <div class="bracket-round">
+                <div class="match-card">
+                  <p><strong>Game 5</strong></p>
+                  <p>Winner Game 1</p>
+                  <p>Winner Game 2</p>
+                </div>
+                <div class="match-card">
+                  <p><strong>Game 6</strong></p>
+                  <p>Winner Game 3</p>
+                  <p>Winner Game 4</p>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <h3>Championship</h3>
+              <div class="bracket-round">
+                <div class="match-card championship">
+                  <p><strong>Romo Cup Final</strong></p>
+                  <p>Winner Game 5</p>
+                  <p>Winner Game 6</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <p>Contact: <a href="mailto:romocup@gmail.com">romocup@gmail.com</a></p>
+          <p class="small">The Romo Cup</p>
+        </div>
+        <small>&copy; 2026 The Romo Cup. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+    </script>
+  </body>
+</html>

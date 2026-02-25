@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Romo Cup | The Teams</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="logo-fallback.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand-wrap" href="index.html" aria-label="The Romo Cup home">
+            <img
+              class="brand-logo logo-image"
+              src="assets/IMG_5206.jpg"
+              alt="The Romo Cup logo"
+            />
+            <p class="brand-title">The Romo Cup</p>
+          </a>
+          <ul class="nav-list">
+            <li><a href="index.html">Donate</a></li>
+            <li><a href="about.html">About Romo</a></li>
+            <li><a href="teams.html" aria-current="page">The Teams</a></li>
+            <li><a href="bracket.html">Bracket</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="card reveal">
+          <h1>The Teams</h1>
+          <p>Search by team name, captain, or tagline.</p>
+
+          <div class="teams-toolbar">
+            <label class="small" for="team-search">Find a team</label>
+            <input
+              id="team-search"
+              class="search-input"
+              type="search"
+              placeholder="Type to filter teams..."
+            />
+          </div>
+
+          <div class="team-grid" id="team-grid">
+            <article class="team-card" data-team="ATO" data-search="ato captain mason charity first">
+              <h3>ATO</h3>
+              <p class="team-meta"><strong>Captain:</strong> Mason R.</p>
+              <p class="team-tagline">Charity-first culture, clutch in close games.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="KA" data-search="ka captain ellis deep roster">
+              <h3>KA</h3>
+              <p class="team-meta"><strong>Captain:</strong> Ellis T.</p>
+              <p class="team-tagline">Deep roster with high-effort defense.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="Sigma Nu" data-search="sigma nu captain brooks discipline">
+              <h3>Sigma Nu</h3>
+              <p class="team-meta"><strong>Captain:</strong> Brooks H.</p>
+              <p class="team-tagline">Disciplined approach and consistent execution.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="Fiji" data-search="fiji captain grant speed pressure">
+              <h3>Fiji</h3>
+              <p class="team-meta"><strong>Captain:</strong> Grant P.</p>
+              <p class="team-tagline">Fast pace and relentless pressure.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="Phi Delt" data-search="phi delt captain caleb balanced">
+              <h3>Phi Delt</h3>
+              <p class="team-meta"><strong>Captain:</strong> Caleb J.</p>
+              <p class="team-tagline">Balanced lineup built for tournament depth.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="Lamda Chi" data-search="lamda chi lambda captain nolan grit">
+              <h3>Lamda Chi</h3>
+              <p class="team-meta"><strong>Captain:</strong> Nolan S.</p>
+              <p class="team-tagline">Grit and chemistry in every inning.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="Farmhouse" data-search="farmhouse captain tyler power bats">
+              <h3>Farmhouse</h3>
+              <p class="team-meta"><strong>Captain:</strong> Tyler M.</p>
+              <p class="team-tagline">Power bats with smart situational play.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+
+            <article class="team-card" data-team="SAE" data-search="sae captain drew momentum">
+              <h3>SAE</h3>
+              <p class="team-meta"><strong>Captain:</strong> Drew K.</p>
+              <p class="team-tagline">Momentum team that peaks late in tournaments.</p>
+              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal" id="team-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-team-name">
+      <div class="modal-panel">
+        <header class="modal-header">
+          <div>
+            <h2 id="modal-team-name">Team</h2>
+            <p class="small" id="modal-seed">Seed</p>
+          </div>
+          <button class="modal-close" type="button" id="modal-close" aria-label="Close modal">Close</button>
+        </header>
+        <div class="modal-body">
+          <div class="modal-grid">
+            <img class="modal-photo" src="assets/IMG_4663.png" alt="Team roster photo" id="modal-photo" />
+            <div>
+              <h3>Roster</h3>
+              <ol class="roster-list" id="modal-roster"></ol>
+            </div>
+          </div>
+          <div>
+            <h3>Team Note</h3>
+            <p id="modal-tagline"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <p>Contact: <a href="mailto:romocup@gmail.com">romocup@gmail.com</a></p>
+          <p class="small">The Romo Cup</p>
+        </div>
+        <small>&copy; 2026 The Romo Cup. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+      const searchInput = document.getElementById("team-search");
+      const teamCards = Array.from(document.querySelectorAll(".team-card"));
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        teamCards.forEach((card) => {
+          const searchable = card.dataset.search || "";
+          const match = searchable.includes(query);
+          card.style.display = match ? "block" : "none";
+        });
+      });
+
+      const teamData = {
+        "ATO": {
+          seed: "Seed #1",
+          tagline: "Charity-first culture, clutch in close games.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "KA": {
+          seed: "Seed #2",
+          tagline: "Deep roster with high-effort defense.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "Sigma Nu": {
+          seed: "Seed #3",
+          tagline: "Disciplined approach and consistent execution.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "Fiji": {
+          seed: "Seed #4",
+          tagline: "Fast pace and relentless pressure.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "Phi Delt": {
+          seed: "Seed #5",
+          tagline: "Balanced lineup built for tournament depth.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "Lamda Chi": {
+          seed: "Seed #6",
+          tagline: "Grit and chemistry in every inning.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "Farmhouse": {
+          seed: "Seed #7",
+          tagline: "Power bats with smart situational play.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        },
+        "SAE": {
+          seed: "Seed #8",
+          tagline: "Momentum team that peaks late in tournaments.",
+          roster: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+        }
+      };
+
+      const modal = document.getElementById("team-modal");
+      const modalClose = document.getElementById("modal-close");
+      const modalTeamName = document.getElementById("modal-team-name");
+      const modalSeed = document.getElementById("modal-seed");
+      const modalTagline = document.getElementById("modal-tagline");
+      const modalRoster = document.getElementById("modal-roster");
+
+      function openTeamModal(teamName) {
+        const details = teamData[teamName];
+        if (!details) return;
+
+        modalTeamName.textContent = teamName;
+        modalSeed.textContent = details.seed;
+        modalTagline.textContent = details.tagline;
+
+        modalRoster.innerHTML = "";
+        details.roster.forEach((player) => {
+          const li = document.createElement("li");
+          li.textContent = player;
+          modalRoster.appendChild(li);
+        });
+
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeTeamModal() {
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".team-detail-trigger").forEach((button) => {
+        button.addEventListener("click", () => {
+          const teamName = button.closest(".team-card")?.dataset.team;
+          openTeamModal(teamName);
+        });
+      });
+
+      modalClose.addEventListener("click", closeTeamModal);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeTeamModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
+          closeTeamModal();
+        }
+      });
+    </script>
+  </body>
+</html>

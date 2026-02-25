@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Romo Cup | About Romo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="logo-fallback.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand-wrap" href="index.html" aria-label="The Romo Cup home">
+            <img
+              class="brand-logo logo-image"
+              src="assets/IMG_5206.jpg"
+              alt="The Romo Cup logo"
+            />
+            <p class="brand-title">The Romo Cup</p>
+          </a>
+          <ul class="nav-list">
+            <li><a href="index.html">Donate</a></li>
+            <li><a href="about.html" aria-current="page">About Romo</a></li>
+            <li><a href="teams.html">The Teams</a></li>
+            <li><a href="bracket.html">Bracket</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section
+          class="hero reveal"
+          style="background-image: linear-gradient(130deg, rgba(4, 20, 56, 0.9), rgba(16, 58, 134, 0.72));"
+        >
+          <div class="hero-inner">
+            <span class="eyebrow">Legacy</span>
+            <h1>The Story of Romo</h1>
+            <p>
+              A life remembered through hope, encouragement, and a community
+              committed to being better than yesterday.
+            </p>
+          </div>
+        </section>
+
+        <section class="section split reveal">
+          <article class="card">
+            <h2>William “Romo” Romanowski</h2>
+            <p>
+              William Romanowski, known as Romo, left behind more than memories.
+              He left behind words that gave his family strength in one of the
+              hardest seasons of their lives.
+            </p>
+            <p>
+              A note written by Will became a source of comfort and direction.
+              While deeply personal, its message was clear: keep encouraging one
+              another, keep showing up for people, and keep moving forward with
+              purpose. That spirit now lives on through the Auburn University
+              endowed scholarship, the Will "Romo" Scholarship, awarded each
+              year to a fraternity man.
+            </p>
+            <p class="pull-quote">
+              "Choose encouragement. Keep going. Be better than yesterday."
+            </p>
+          </article>
+
+          <article class="card">
+            <img
+              class="about-image"
+              src="assets/romo-story.avif"
+              alt="Remembering William Romanowski"
+            />
+            <p>
+              In honor of Will, his family created inspirational bracelets to
+              share that same encouragement with others. Each bracelet is a
+              reminder that hope can be carried, even through grief.
+            </p>
+          </article>
+        </section>
+
+        <section class="section card reveal">
+          <h2>From a Note to a Mission</h2>
+          <p>
+            What began as a private message became a public mission. The
+            bracelets opened a way to comfort others while keeping Will’s spirit
+            present in everyday life.
+          </p>
+          <p>
+            The Romo Cup grew from that same heartbeat. It is a day where
+            competition, connection, and generosity come together to honor
+            Will’s legacy and support the Auburn University endowed scholarship, the Will "Romo" Scholarship.
+          </p>
+          <p>
+            Every team, every supporter, and every donation helps turn memory
+            into impact by strengthening community and funding an annual
+            scholarship recipient: a fraternity man selected for the Will "Romo" Scholarship at Auburn University.
+          </p>
+        </section>
+
+        <section class="cta-block reveal">
+          <div>
+            <h3>Stand With the Mission</h3>
+            <p>
+              Help us continue Romo’s legacy by supporting the Will "Romo" Scholarship at Auburn University.
+            </p>
+          </div>
+          <a class="button button-primary" href="index.html">Donate Today</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <p>Contact: <a href="mailto:romocup@gmail.com">romocup@gmail.com</a></p>
+          <p class="small">The Romo Cup</p>
+        </div>
+        <small>&copy; 2026 The Romo Cup. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+    </script>
+  </body>
+</html>
