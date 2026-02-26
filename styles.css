@@ -840,3 +840,81 @@ small,
     align-items: start;
   }
 }
+
+/* About page campaign sections */
+.about-hero {
+  background-image:
+    linear-gradient(125deg, rgba(5, 24, 68, 0.9), rgba(13, 55, 133, 0.7)),
+    url("assets/IMG_5206.jpg");
+}
+
+.about-hero .hero-inner {
+  max-width: 860px;
+}
+
+.legacy-quote {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 106, 19, 0.3);
+  background: linear-gradient(135deg, rgba(255, 106, 19, 0.08), rgba(7, 36, 95, 0.08));
+  color: var(--primary);
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.fraternity-grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.fraternity-grid article {
+  padding: var(--space-2);
+  border-radius: 12px;
+  border: 1px solid rgba(7, 36, 95, 0.14);
+  background: #f8faff;
+}
+
+.fraternity-grid p {
+  margin-bottom: 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: 12px;
+  border: 1px solid rgba(7, 36, 95, 0.16);
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(8, 31, 84, 0.07);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.cta-centered {
+  text-align: center;
+  justify-content: center;
+}
+
+.cta-centered p {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (min-width: 880px) {
+  .fraternity-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
