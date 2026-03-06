@@ -30,6 +30,9 @@
               class="brand-logo logo-image"
               src="/assets/IMG_5206.jpg"
               alt="The Romo Cup logo"
+              width="74"
+              height="74"
+              decoding="async"
             />
             <p class="brand-title">The Romo Cup</p>
           </a>
@@ -53,75 +56,79 @@
       <div class="container home-full">
         <section class="hero reveal" data-goal="26000" data-raised="0">
           <div class="hero-inner">
-            <figure class="hero-photo-wrap">
-              <img
-                src="/assets/images/romo-team-night.jpg"
-                alt="Romo Cup team photo at night in blue jerseys"
-                width="1179"
-                height="1229"
-                class="hero-photo"
-              />
-              <figcaption>Built on baseball, brotherhood, and purpose.</figcaption>
-            </figure>
-
-            <span class="eyebrow">Wiffle Ball Fundraiser</span>
-            <h1>Play for More Than a Trophy</h1>
-            <p>
-              The Romo Cup unites teams, families, and supporters to compete,
-              give back, and honor Romo through an annual day of purpose that
-              funds the Auburn University endowed scholarship, the Will "Romo"
-              Scholarship, awarded to an Auburn student each year.
-            </p>
-            <div class="hero-actions">
-              <a
-                class="button button-primary"
-                href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e"
-                >Donate Now</a
-              >
-              <a class="button button-secondary" href="/teams/">Meet the Teams</a>
-            </div>
-
-            <div class="hero-meta-grid">
-              <section class="meta-panel" aria-label="Tournament countdown">
-                <p class="meta-label">Tournament Countdown</p>
-                <div class="countdown" id="countdown">
-                  <div class="countdown-unit">
-                    <span class="countdown-number" id="count-days">00</span>
-                    <span class="countdown-label">Days</span>
-                  </div>
-                  <div class="countdown-unit">
-                    <span class="countdown-number" id="count-hours">00</span>
-                    <span class="countdown-label">Hours</span>
-                  </div>
-                  <div class="countdown-unit">
-                    <span class="countdown-number" id="count-minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                  </div>
-                  <div class="countdown-unit">
-                    <span class="countdown-number" id="count-seconds">00</span>
-                    <span class="countdown-label">Seconds</span>
-                  </div>
-                </div>
-              </section>
-
-              <section class="meta-panel" aria-label="Donation progress">
-                <p class="meta-label">Donation Tracker</p>
-                <div class="donation-stats">
-                  <p class="donation-raised" id="donation-raised">$0 Raised</p>
-                  <p class="donation-goal">Goal: $26,000</p>
-                </div>
-                <div
-                  class="donation-track"
-                  role="progressbar"
-                  aria-valuemin="0"
-                  aria-valuemax="26000"
-                  aria-valuenow="0"
+            <article class="hero-content">
+              <span class="eyebrow">Wiffle Ball Fundraiser</span>
+              <h1>Play for More Than a Trophy</h1>
+              <p>
+                The Romo Cup unites teams, families, and supporters to compete,
+                give back, and honor Romo through an annual day of purpose that
+                funds the Auburn University endowed scholarship, the Will "Romo"
+                Scholarship, awarded to an Auburn student each year.
+              </p>
+              <div class="hero-actions">
+                <a
+                  class="button button-primary"
+                  href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e"
+                  >Donate Now</a
                 >
-                  <div class="donation-progress" id="donation-progress"></div>
-                </div>
-                <p class="donation-percent" id="donation-percent">0% of goal reached</p>
-              </section>
-            </div>
+                <a class="button button-secondary" href="/teams/">Meet the Teams</a>
+              </div>
+
+              <div class="hero-meta-grid">
+                <section class="meta-panel" aria-label="Tournament countdown">
+                  <p class="meta-label">Tournament Countdown</p>
+                  <div class="countdown" id="countdown">
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-days">00</span>
+                      <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-hours">00</span>
+                      <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-minutes">00</span>
+                      <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-seconds">00</span>
+                      <span class="countdown-label">Seconds</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="meta-panel" aria-label="Donation progress">
+                  <p class="meta-label">Donation Tracker</p>
+                  <div class="donation-stats">
+                    <p class="donation-raised" id="donation-raised">$0 Raised</p>
+                    <p class="donation-goal">Goal: $26,000</p>
+                  </div>
+                  <div
+                    class="donation-track"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="26000"
+                    aria-valuenow="0"
+                  >
+                    <div class="donation-progress" id="donation-progress"></div>
+                  </div>
+                  <p class="donation-percent" id="donation-percent">0% of goal reached</p>
+                </section>
+              </div>
+            </article>
+
+            <figure class="hero-media-wrap">
+              <div class="image-frame wide hero-media">
+                <img
+                  src="/assets/images/romo-team-night.jpg"
+                  alt="Romo Cup team photo at night in blue jerseys"
+                  width="1179"
+                  height="1229"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="hero-media-caption">Built on baseball, brotherhood, and purpose.</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -171,14 +178,17 @@
             </article>
 
             <aside>
-              <img
-                class="about-image"
-                src="/assets/images/romo-family-1.jpg"
-                alt="Will Romanowski with family at an evening event"
-                width="1242"
-                height="1700"
-                loading="lazy"
-              />
+              <div class="image-frame portrait">
+                <img
+                  class="about-image"
+                  src="/assets/images/romo-family-1.jpg"
+                  alt="Will Romanowski with family at an evening event"
+                  width="1242"
+                  height="1700"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </aside>
           </div>
         </section>
@@ -194,35 +204,44 @@
 
         <section class="section card reveal">
           <h2>Photo Highlights</h2>
-          <div class="photo-highlights-grid">
-            <figure>
-              <img
-                src="/assets/images/romo-group-day.jpg"
-                alt="Daytime Romo Cup group photo on the grass"
-                width="1170"
-                height="2532"
-                loading="lazy"
-              />
+          <div class="highlights-grid">
+            <figure class="highlight-card">
+              <div class="image-frame portrait">
+                <img
+                  src="/assets/images/romo-group-day.jpg"
+                  alt="Daytime Romo Cup group photo on the grass"
+                  width="1170"
+                  height="2532"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <figcaption>Community showing up for a shared purpose.</figcaption>
             </figure>
-            <figure>
-              <img
-                src="/assets/images/romo-wedding.jpg"
-                alt="Formal wedding portrait with bouquet and tuxedo"
-                width="1242"
-                height="1100"
-                loading="lazy"
-              />
+            <figure class="highlight-card">
+              <div class="image-frame portrait">
+                <img
+                  src="/assets/images/romo-wedding.jpg"
+                  alt="Formal wedding portrait with bouquet and tuxedo"
+                  width="1242"
+                  height="1100"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <figcaption>Moments and memories that continue to inspire this mission.</figcaption>
             </figure>
-            <figure>
-              <img
-                src="/assets/images/romo-friends-theater.jpg"
-                alt="Will with friends in an ornate indoor theater"
-                width="1050"
-                height="1400"
-                loading="lazy"
-              />
+            <figure class="highlight-card">
+              <div class="image-frame portrait">
+                <img
+                  src="/assets/images/romo-friends-theater.jpg"
+                  alt="Will with friends in an ornate indoor theater"
+                  width="1050"
+                  height="1400"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <figcaption>Friendship, joy, and the people who carry Will’s legacy forward.</figcaption>
             </figure>
           </div>
