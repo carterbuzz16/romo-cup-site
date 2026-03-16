@@ -44,7 +44,7 @@
       <div class="container">
         <section class="card reveal">
           <h1>The Teams</h1>
-          <p>Search by team name, captain, or tagline.</p>
+          <p>Search by team name.</p>
 
           <div class="teams-toolbar">
             <label class="small" for="team-search">Find a team</label>
@@ -57,59 +57,43 @@
           </div>
 
           <div class="team-grid" id="team-grid">
-            <article class="team-card" data-team="ATO" data-search="ato captain mason charity first">
+            <article class="team-card" data-team="ATO" data-search="ato">
               <h3>ATO</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Charity-first culture, clutch in close games.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="KA" data-search="ka captain ellis deep roster">
+            <article class="team-card" data-team="KA" data-search="ka">
               <h3>KA</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Deep roster with high-effort defense.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="Sigma Nu" data-search="sigma nu captain brooks discipline">
+            <article class="team-card" data-team="Sigma Nu" data-search="sigma nu">
               <h3>Sigma Nu</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Disciplined approach and consistent execution.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="Fiji" data-search="fiji captain grant speed pressure">
+            <article class="team-card" data-team="Fiji" data-search="fiji">
               <h3>Fiji</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Fast pace and relentless pressure.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="Phi Delt" data-search="phi delt captain caleb balanced">
+            <article class="team-card" data-team="Phi Delt" data-search="phi delt">
               <h3>Phi Delt</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Balanced lineup built for tournament depth.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="Lambda Chi" data-search="lambda chi lambda captain nolan grit">
+            <article class="team-card" data-team="Lambda Chi" data-search="lambda chi">
               <h3>Lambda Chi</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Grit and chemistry in every inning.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="Farmhouse" data-search="farmhouse captain tyler power bats">
+            <article class="team-card" data-team="Farmhouse" data-search="farmhouse">
               <h3>Farmhouse</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Power bats with smart situational play.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
 
-            <article class="team-card" data-team="SAE" data-search="sae captain drew momentum">
+            <article class="team-card" data-team="SAE" data-search="sae">
               <h3>SAE</h3>
-              <p class="team-meta"><strong>Captain:</strong> TBD</p>
-              <p class="team-tagline">Momentum team that peaks late in tournaments.</p>
               <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
             </article>
           </div>
@@ -133,10 +117,6 @@
               <h3>Roster</h3>
               <ol class="roster-list" id="modal-roster"></ol>
             </div>
-          </div>
-          <div>
-            <h3>Team Note</h3>
-            <p id="modal-tagline"></p>
           </div>
         </div>
       </div>
@@ -183,42 +163,34 @@
       const teamData = {
         "ATO": {
           seed: "Seed #1",
-          tagline: "Charity-first culture, clutch in close games.",
           roster: ["TBD"]
         },
         "KA": {
           seed: "Seed #2",
-          tagline: "Deep roster with high-effort defense.",
           roster: ["TBD"]
         },
         "Sigma Nu": {
           seed: "Seed #3",
-          tagline: "Disciplined approach and consistent execution.",
           roster: ["TBD"]
         },
         "Fiji": {
           seed: "Seed #4",
-          tagline: "Fast pace and relentless pressure.",
           roster: ["TBD"]
         },
         "Phi Delt": {
           seed: "Seed #5",
-          tagline: "Balanced lineup built for tournament depth.",
           roster: ["TBD"]
         },
         "Lambda Chi": {
           seed: "Seed #6",
-          tagline: "Grit and chemistry in every inning.",
-          roster: ["TBD"]
+          roster: ["Jackson Greene", "Connor Harris", "Wyatt Reuter", "Landon Harper", "Braxton Sherling", "Connor Bain", "Walker Hilton", "Cannon Hopper", "Aaron Reeves", "Brannon Spencer", "Eliot Mack", "Kyle Crisp"]
         },
         "Farmhouse": {
           seed: "Seed #7",
-          tagline: "Power bats with smart situational play.",
           roster: ["TBD"]
         },
         "SAE": {
           seed: "Seed #8",
-          tagline: "Momentum team that peaks late in tournaments.",
           roster: ["TBD"]
         }
       };
@@ -227,7 +199,6 @@
       const modalClose = document.getElementById("modal-close");
       const modalTeamName = document.getElementById("modal-team-name");
       const modalSeed = document.getElementById("modal-seed");
-      const modalTagline = document.getElementById("modal-tagline");
       const modalRoster = document.getElementById("modal-roster");
 
       function openTeamModal(teamName) {
@@ -236,7 +207,6 @@
 
         modalTeamName.textContent = teamName;
         modalSeed.textContent = details.seed;
-        modalTagline.textContent = details.tagline;
 
         modalRoster.innerHTML = "";
         details.roster.forEach((player) => {
