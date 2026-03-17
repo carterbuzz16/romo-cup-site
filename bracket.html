@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/logo-fallback.js" defer></script>
   </head>
-  <body>
+  <body class="bracket-page">
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
@@ -41,71 +41,131 @@
       </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content bracket-main">
       <div class="container">
-        <section class="card reveal">
+        <section class="bracket-hero reveal">
+          <span class="bracket-kicker">2026 Tournament</span>
           <h1>Romo Cup Bracket</h1>
-          <p>
-            Placeholder bracket is set with all current teams. Update seeds,
-            matchups, and winners as the tournament bracket is finalized.
-          </p>
+          <p>Follow the path to the championship on April 25.</p>
         </section>
 
-        <section class="section card reveal">
-          <div class="bracket-grid">
-            <article>
-              <h3>Quarterfinals</h3>
-              <div class="bracket-round">
-                <div class="match-card">
-                  <p><strong>Game 1</strong></p>
-                  <p>Seed 1: ATO</p>
-                  <p>Seed 8: SAE</p>
-                </div>
-                <div class="match-card">
-                  <p><strong>Game 2</strong></p>
-                  <p>Seed 4: Fiji</p>
-                  <p>Seed 5: Phi Delt</p>
-                </div>
-                <div class="match-card">
-                  <p><strong>Game 3</strong></p>
-                  <p>Seed 3: Sigma Nu</p>
-                  <p>Seed 6: Lambda Chi</p>
-                </div>
-                <div class="match-card">
-                  <p><strong>Game 4</strong></p>
-                  <p>Seed 2: KA</p>
-                  <p>Seed 7: Farmhouse</p>
-                </div>
-              </div>
-            </article>
+        <section class="section reveal bracket-board-shell">
+          <div class="bracket-board" aria-label="Tournament bracket">
+            <section class="bracket-column quarterfinal-column">
+              <header class="round-heading">
+                <p class="round-kicker">Opening Round</p>
+                <h2>Quarterfinals</h2>
+              </header>
 
-            <article>
-              <h3>Semifinals</h3>
-              <div class="bracket-round">
-                <div class="match-card">
-                  <p><strong>Game 5</strong></p>
-                  <p>Winner Game 1</p>
-                  <p>Winner Game 2</p>
+              <article class="game-card reveal">
+                <p class="game-label">Game 1</p>
+                <div class="team-slot">
+                  <span class="seed-pill">1</span>
+                  <span class="team-name">ATO</span>
                 </div>
-                <div class="match-card">
-                  <p><strong>Game 6</strong></p>
-                  <p>Winner Game 3</p>
-                  <p>Winner Game 4</p>
+                <div class="team-slot">
+                  <span class="seed-pill">8</span>
+                  <span class="team-name">SAE</span>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <article>
-              <h3>Championship</h3>
-              <div class="bracket-round">
-                <div class="match-card championship">
-                  <p><strong>Romo Cup Final</strong></p>
-                  <p>Winner Game 5</p>
-                  <p>Winner Game 6</p>
+              <article class="game-card reveal">
+                <p class="game-label">Game 2</p>
+                <div class="team-slot">
+                  <span class="seed-pill">4</span>
+                  <span class="team-name">Fiji</span>
                 </div>
-              </div>
-            </article>
+                <div class="team-slot">
+                  <span class="seed-pill">5</span>
+                  <span class="team-name">Phi Delt</span>
+                </div>
+              </article>
+
+              <article class="game-card reveal">
+                <p class="game-label">Game 3</p>
+                <div class="team-slot">
+                  <span class="seed-pill">3</span>
+                  <span class="team-name">Sigma Nu</span>
+                </div>
+                <div class="team-slot">
+                  <span class="seed-pill">6</span>
+                  <span class="team-name">Lambda Chi</span>
+                </div>
+              </article>
+
+              <article class="game-card reveal">
+                <p class="game-label">Game 4</p>
+                <div class="team-slot">
+                  <span class="seed-pill">2</span>
+                  <span class="team-name">KA</span>
+                </div>
+                <div class="team-slot">
+                  <span class="seed-pill">7</span>
+                  <span class="team-name">Farmhouse</span>
+                </div>
+              </article>
+            </section>
+
+            <section class="bracket-column semifinal-column">
+              <header class="round-heading">
+                <p class="round-kicker">Win And Advance</p>
+                <h2>Semifinals</h2>
+              </header>
+
+              <article class="game-card reveal connector-card connector-top">
+                <p class="game-label">Game 5</p>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 1</span>
+                </div>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 2</span>
+                </div>
+              </article>
+
+              <article class="game-card reveal connector-card connector-bottom">
+                <p class="game-label">Game 6</p>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 3</span>
+                </div>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 4</span>
+                </div>
+              </article>
+            </section>
+
+            <section class="bracket-column championship-column">
+              <header class="round-heading championship-heading">
+                <p class="round-kicker">For The Cup</p>
+                <h2>Championship</h2>
+              </header>
+
+              <article class="game-card championship-card reveal">
+                <p class="game-label">Romo Cup Final</p>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 5</span>
+                </div>
+                <div class="team-slot winner-slot">
+                  <span class="winner-tag">Winner</span>
+                  <span class="team-name">Game 6</span>
+                </div>
+              </article>
+            </section>
           </div>
+        </section>
+
+        <section class="section cta-block bracket-cta reveal">
+          <div>
+            <h2>Come out, compete, and support the mission.</h2>
+            <p>
+              Every matchup helps build momentum for the Will Romanowski Endowed Scholarship at Auburn University.
+            </p>
+          </div>
+          <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
         </section>
       </div>
     </main>
