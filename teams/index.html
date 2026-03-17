@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/logo-fallback.js" defer></script>
   </head>
-  <body>
+  <body class="teams-page">
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
@@ -40,87 +40,26 @@
       </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content teams-main">
       <div class="container">
-        <section class="card reveal">
-          <h1>The Teams</h1>
-          <p>Search by team name.</p>
-
-          <div class="teams-toolbar">
-            <label class="small" for="team-search">Find a team</label>
-            <input
-              id="team-search"
-              class="search-input"
-              type="search"
-              placeholder="Type to filter teams..."
-            />
+        <section class="teams-hero reveal">
+          <div class="teams-hero-copy">
+            <span class="teams-kicker">Tournament Lineup</span>
+            <h1>Romo Cup Teams</h1>
+            <p>Meet the squads competing for the cup.</p>
           </div>
-
-          <div class="team-grid" id="team-grid">
-            <article class="team-card" data-team="ATO" data-search="ato">
-              <h3>ATO</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="KA" data-search="ka">
-              <h3>KA</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="Sigma Nu" data-search="sigma nu">
-              <h3>Sigma Nu</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="Fiji" data-search="fiji">
-              <h3>Fiji</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="Phi Delt" data-search="phi delt">
-              <h3>Phi Delt</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="Lambda Chi" data-search="lambda chi">
-              <h3>Lambda Chi</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="Farmhouse" data-search="farmhouse">
-              <h3>Farmhouse</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
-
-            <article class="team-card" data-team="SAE" data-search="sae">
-              <h3>SAE</h3>
-              <button class="button button-outline team-detail-trigger" type="button">View Team Details</button>
-            </article>
+          <div class="teams-hero-accent" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
+        </section>
+
+        <section class="teams-roster-section reveal">
+          <div class="team-grid" id="team-grid"></div>
         </section>
       </div>
     </main>
-
-    <div class="modal" id="team-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-team-name">
-      <div class="modal-panel">
-        <header class="modal-header">
-          <div>
-            <h2 id="modal-team-name">Team</h2>
-            <p class="small" id="modal-seed">Seed</p>
-          </div>
-          <button class="modal-close" type="button" id="modal-close" aria-label="Close modal">Close</button>
-        </header>
-        <div class="modal-body">
-          <div class="modal-grid">
-            <img class="modal-photo" src="/assets/blue romo cup.png" alt="Team roster photo" id="modal-photo" width="1200" height="900" loading="lazy" decoding="async" />
-            <div>
-              <h3>Roster</h3>
-              <ol class="roster-list" id="modal-roster"></ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="site-footer">
       <div class="container footer-inner">
@@ -134,6 +73,59 @@
     </footer>
 
     <script>
+      const teamData = [
+        { name: "ATO", seed: "01", roster: ["TBD"] },
+        { name: "KA", seed: "02", roster: ["TBD"] },
+        { name: "Sigma Nu", seed: "03", roster: ["TBD"] },
+        { name: "Fiji", seed: "04", roster: ["TBD"] },
+        { name: "Phi Delt", seed: "05", roster: ["TBD"] },
+        {
+          name: "Lambda Chi",
+          seed: "06",
+          roster: [
+            "Jackson Greene",
+            "Connor Harris",
+            "Wyatt Reuter",
+            "Landon Harper",
+            "Braxton Sherling",
+            "Connor Bain",
+            "Walker Hilton",
+            "Cannon Hopper",
+            "Aaron Reeves",
+            "Brannon Spencer",
+            "Eliot Mack",
+            "Kyle Crisp"
+          ]
+        },
+        { name: "Farmhouse", seed: "07", roster: ["TBD"] },
+        { name: "SAE", seed: "08", roster: ["TBD"] }
+      ];
+
+      const teamGrid = document.getElementById("team-grid");
+
+      teamGrid.innerHTML = teamData
+        .map((team, index) => {
+          const rosterItems = team.roster
+            .map((player) => `<li class="team-roster-item">${player}</li>`)
+            .join("");
+
+          return `
+            <article class="team-card reveal" style="transition-delay: ${index * 45}ms">
+              <div class="team-card-top">
+                <span class="team-seed">${team.seed}</span>
+                <div class="team-title-block">
+                  <p class="team-label">Roster</p>
+                  <h2>${team.name}</h2>
+                </div>
+              </div>
+              <ul class="team-roster-list" aria-label="${team.name} roster">
+                ${rosterItems}
+              </ul>
+            </article>
+          `;
+        })
+        .join("");
+
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -147,103 +139,6 @@
       );
 
       document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
-      const searchInput = document.getElementById("team-search");
-      const teamCards = Array.from(document.querySelectorAll(".team-card"));
-
-      searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
-        teamCards.forEach((card) => {
-          const searchable = card.dataset.search || "";
-          const match = searchable.includes(query);
-          card.style.display = match ? "block" : "none";
-        });
-      });
-
-      const teamData = {
-        "ATO": {
-          seed: "Seed #1",
-          roster: ["TBD"]
-        },
-        "KA": {
-          seed: "Seed #2",
-          roster: ["TBD"]
-        },
-        "Sigma Nu": {
-          seed: "Seed #3",
-          roster: ["TBD"]
-        },
-        "Fiji": {
-          seed: "Seed #4",
-          roster: ["TBD"]
-        },
-        "Phi Delt": {
-          seed: "Seed #5",
-          roster: ["TBD"]
-        },
-        "Lambda Chi": {
-          seed: "Seed #6",
-          roster: ["Jackson Greene", "Connor Harris", "Wyatt Reuter", "Landon Harper", "Braxton Sherling", "Connor Bain", "Walker Hilton", "Cannon Hopper", "Aaron Reeves", "Brannon Spencer", "Eliot Mack", "Kyle Crisp"]
-        },
-        "Farmhouse": {
-          seed: "Seed #7",
-          roster: ["TBD"]
-        },
-        "SAE": {
-          seed: "Seed #8",
-          roster: ["TBD"]
-        }
-      };
-
-      const modal = document.getElementById("team-modal");
-      const modalClose = document.getElementById("modal-close");
-      const modalTeamName = document.getElementById("modal-team-name");
-      const modalSeed = document.getElementById("modal-seed");
-      const modalRoster = document.getElementById("modal-roster");
-
-      function openTeamModal(teamName) {
-        const details = teamData[teamName];
-        if (!details) return;
-
-        modalTeamName.textContent = teamName;
-        modalSeed.textContent = details.seed;
-
-        modalRoster.innerHTML = "";
-        details.roster.forEach((player) => {
-          const li = document.createElement("li");
-          li.textContent = player;
-          modalRoster.appendChild(li);
-        });
-
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeTeamModal() {
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      document.querySelectorAll(".team-detail-trigger").forEach((button) => {
-        button.addEventListener("click", () => {
-          const teamName = button.closest(".team-card")?.dataset.team;
-          openTeamModal(teamName);
-        });
-      });
-
-      modalClose.addEventListener("click", closeTeamModal);
-
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          closeTeamModal();
-        }
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
-          closeTeamModal();
-        }
-      });
     </script>
   </body>
 </html>
