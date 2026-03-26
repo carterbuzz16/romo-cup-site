@@ -48,6 +48,11 @@
             <span class="teams-kicker">Tournament Lineup</span>
             <h1>Romo Cup Teams</h1>
             <p>Meet the squads competing for the cup.</p>
+            <div class="teams-hero-meta">
+              <div><strong>8 Teams</strong><span>Competing for the title</span></div>
+              <div><strong>April 25</strong><span>Tournament day</span></div>
+              <div><strong>1 Mission</strong><span>Support Auburn students</span></div>
+            </div>
           </div>
           <div class="teams-hero-accent" aria-hidden="true">
             <span></span>
@@ -57,6 +62,11 @@
         </section>
 
         <section class="teams-roster-section reveal">
+          <div class="teams-section-head">
+            <p class="section-kicker">Tournament Field</p>
+            <h2>The 2026 lineup.</h2>
+            <p class="section-intro">Every chapter enters with its own identity, but they all play for the same purpose: to compete well, represent their brothers, and support the Will Romanowski Endowed Scholarship.</p>
+          </div>
           <div class="team-grid" id="team-grid"></div>
         </section>
       </div>
@@ -139,6 +149,10 @@
               <ul class="team-roster-list" aria-label="${team.name} roster">
                 ${rosterItems}
               </ul>
+              <div class="team-card-bottom">
+                <span class="team-count">${team.roster.length === 1 && team.roster[0] === "TBD" ? "Roster TBD" : `${team.roster.length} Players`}</span>
+                <span class="team-card-mark">Seed ${team.seed}</span>
+              </div>
             </article>
           `;
         })

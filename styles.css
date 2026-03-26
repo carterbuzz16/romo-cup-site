@@ -2160,3 +2160,266 @@ small,
 .about-page .cta-block > * {
   position: relative;
 }
+
+/* 2026 polish pass */
+:root {
+  --surface: #ffffff;
+  --surface-alt: #f8fbff;
+  --radius-lg: 22px;
+  --shadow-soft: 0 18px 40px rgba(8, 31, 84, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 106, 19, 0.06), transparent 22%),
+    linear-gradient(180deg, #f5f8fd 0%, #eef3fb 100%);
+}
+
+.main-content > .container {
+  position: relative;
+}
+
+.section-intro {
+  max-width: 62ch;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.card,
+.cta-block,
+.teams-page .team-card,
+.sponsor-tier-card,
+.current-sponsor-tier-block,
+.current-sponsor-card,
+.game-card {
+  border-radius: var(--radius-lg);
+}
+
+.section.card,
+.current-sponsor-tier-block,
+.sponsor-tier-card,
+.game-card,
+.teams-page .team-card {
+  box-shadow: var(--shadow-soft);
+}
+
+.section.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.section.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 106, 19, 0.28), rgba(7, 36, 95, 0));
+}
+
+.meta-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.countdown-unit,
+.donation-track {
+  backdrop-filter: blur(4px);
+}
+
+.hero-pills,
+.teams-hero-meta,
+.bracket-hero-meta,
+.sponsor-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-pills {
+  margin-top: 20px;
+}
+
+.hero-pill,
+.teams-hero-meta > div,
+.bracket-hero-meta > div,
+.sponsor-proof-row > div {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.09);
+  min-width: 140px;
+}
+
+.hero-pill {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  justify-content: center;
+}
+
+.support-block,
+.curated-highlights,
+.testimonials-shell,
+.one-pager-card,
+.bracket-intro-panel {
+  margin-top: var(--space-5);
+}
+
+.support-block .support-list {
+  margin-top: 18px;
+}
+
+.highlight-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.highlight-card:hover,
+.highlight-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(255, 106, 19, 0.22);
+  box-shadow: 0 18px 34px rgba(8, 31, 84, 0.12);
+}
+
+.about-page .container {
+  max-width: 1120px;
+}
+
+.about-pillars {
+  display: grid;
+  gap: 20px;
+}
+
+.pillar-card {
+  padding: 26px;
+  border-radius: 20px;
+  border: 1px solid rgba(7, 36, 95, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.98));
+  box-shadow: var(--shadow-soft);
+}
+
+.pillar-card h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+.testimonials-shell .testimonial-grid {
+  margin-top: 18px;
+}
+
+.testimonial-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(246, 249, 255, 1));
+}
+
+.one-pager-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(243, 247, 255, 0.98));
+}
+
+.one-pager-card .button {
+  margin-top: 16px;
+}
+
+.teams-section-head {
+  margin-bottom: 24px;
+}
+
+.teams-hero-meta {
+  margin-top: 24px;
+}
+
+.teams-hero-meta strong,
+.bracket-hero-meta strong,
+.sponsor-proof-row strong {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.teams-hero-meta span,
+.bracket-hero-meta span,
+.sponsor-proof-row span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
+}
+
+.team-card-bottom {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(7, 36, 95, 0.08);
+}
+
+.team-count,
+.team-card-mark {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team-card-mark {
+  color: var(--accent);
+}
+
+.bracket-hero-meta {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+}
+
+.bracket-intro-panel {
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.sponsor-proof-row {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+}
+
+.sponsor-proof-row > div {
+  min-width: 180px;
+}
+
+.current-sponsor-tier-block,
+.current-sponsor-card,
+.sponsor-tier-card {
+  backdrop-filter: blur(10px);
+}
+
+@media (min-width: 900px) {
+  .about-pillars {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-pill,
+  .teams-hero-meta > div,
+  .bracket-hero-meta > div,
+  .sponsor-proof-row > div {
+    min-width: calc(50% - 6px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-pill,
+  .teams-hero-meta > div,
+  .bracket-hero-meta > div,
+  .sponsor-proof-row > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .team-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
