@@ -97,7 +97,7 @@
             <p class="footer-heading">Connect</p>
             <div class="footer-contact-list">
               <a href="mailto:romocup@gmail.com">romocup@gmail.com</a>
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="footer-social-link" href="https://www.instagram.com/romo_cup/" target="_blank" rel="noopener noreferrer" aria-label="Follow The Romo Cup on Instagram"><span class="footer-social-icon" aria-hidden="true">◎</span><span>Instagram</span></a>
               <a href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
             </div>
           </section>
@@ -110,14 +110,33 @@
 
     <script>
       const teamData = [
-        { name: "ATO", seed: "01", roster: ["TBD"] },
-        { name: "KA", seed: "02", roster: ["TBD"] },
-        { name: "Sigma Nu", seed: "03", roster: ["TBD"] },
-        { name: "Fiji", seed: "04", roster: ["TBD"] },
-        { name: "Phi Delt", seed: "05", roster: ["TBD"] },
+        { name: "ATO", seed: "01", captain: null, roster: ["TBD"] },
+        { name: "SNU", seed: "02", captain: null, roster: ["TBD"] },
+        { name: "FIJI", seed: "03", captain: null, roster: ["TBD"] },
+        { name: "KA", seed: "04", captain: null, roster: ["TBD"] },
         {
-          name: "Lambda Chi",
+          name: "FH",
+          seed: "05",
+          captain: null,
+          roster: [
+            "James Sheffield",
+            "Caleb Dover",
+            "Cook Kemper",
+            "John hinton Hogue",
+            "Kent Blankenburg",
+            "Luke McClurkin",
+            "David McClurkin",
+            "Mason Waters",
+            "Sam \"Scraw\" Crawford",
+            "Sam Click",
+            "Trent Waldrop",
+            "William Peerson"
+          ]
+        },
+        {
+          name: "Lambda",
           seed: "06",
+          captain: null,
           roster: [
             "Jackson Greene",
             "Connor Harris",
@@ -133,10 +152,10 @@
             "Kyle Crisp"
           ]
         },
-        { name: "Farmhouse", seed: "07", roster: ["TBD"] },
         {
           name: "SAE",
-          seed: "08",
+          seed: "07",
+          captain: null,
           roster: [
             "Gram Thornton",
             "Robert Mitchell",
@@ -151,6 +170,24 @@
             "Chas miller",
             "Harrison Gough"
           ]
+        },
+        {
+          name: "Phi Delt",
+          seed: "08",
+          captain: "Stephen Beatty",
+          roster: [
+            "Brooks Roberts",
+            "Zach Lightfoot",
+            "Brooks Booth",
+            "Jonny Kerns",
+            "Brayden Williams",
+            "Cunningham Copeland",
+            "Chase Rose",
+            "George Pelekis",
+            "Graham Giles",
+            "Nick Newton",
+            "Carl Pickett"
+          ]
         }
       ];
 
@@ -161,6 +198,18 @@
           const rosterItems = team.roster
             .map((player) => `<li class="team-roster-item">${player}</li>`)
             .join("");
+          const captainMarkup = team.captain
+            ? `
+              <div class="team-captain-block">
+                <span class="team-captain-label">Captain</span>
+                <p class="team-captain-name">${team.captain}</p>
+              </div>
+            `
+            : "";
+          const rosterTotal =
+            team.roster.length === 1 && team.roster[0] === "TBD"
+              ? "Roster TBD"
+              : `${team.roster.length + (team.captain ? 1 : 0)} Total`;
 
           return `
             <article class="team-card reveal" style="transition-delay: ${index * 45}ms">
@@ -171,11 +220,12 @@
                   <h2>${team.name}</h2>
                 </div>
               </div>
+              ${captainMarkup}
               <ul class="team-roster-list" aria-label="${team.name} roster">
                 ${rosterItems}
               </ul>
               <div class="team-card-bottom">
-                <span class="team-count">${team.roster.length === 1 && team.roster[0] === "TBD" ? "Roster TBD" : `${team.roster.length} Players`}</span>
+                <span class="team-count">${rosterTotal}</span>
                 <span class="team-card-mark">Seed ${team.seed}</span>
               </div>
             </article>
