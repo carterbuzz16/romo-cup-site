@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/logo-fallback.js" defer></script>
   </head>
-  <body class="teams-page">
+  <body class="teams-page teams-page-expanded">
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
@@ -48,10 +48,19 @@
             <span class="teams-kicker">Tournament Lineup</span>
             <h1>Romo Cup Teams</h1>
             <p>Meet the squads competing for the cup.</p>
-            <div class="teams-hero-meta">
-              <div><strong>8 Teams</strong><span>Competing for the title</span></div>
-              <div><strong>April 25</strong><span>Tournament day</span></div>
-              <div><strong>1 Mission</strong><span>Support Auburn students</span></div>
+            <div class="teams-hero-meta teams-hero-stat-cards">
+              <div>
+                <strong>8 Teams</strong>
+                <span>Competing for the title</span>
+              </div>
+              <div>
+                <strong>April 25</strong>
+                <span>Tournament day</span>
+              </div>
+              <div>
+                <strong>1 Mission</strong>
+                <span>Support Auburn students</span>
+              </div>
             </div>
           </div>
           <div class="teams-hero-accent" aria-hidden="true">
@@ -67,7 +76,24 @@
             <h2>The 2026 lineup.</h2>
             <p class="section-intro">Every chapter enters with its own identity, but they all play for the same purpose: to compete well, represent their brothers, and support the Will Romanowski Endowed Scholarship.</p>
           </div>
-          <div class="team-grid" id="team-grid"></div>
+
+          <div class="teams-grid-shell">
+            <div class="team-grid" id="team-grid"></div>
+          </div>
+        </section>
+
+        <section class="section cta-block cta-centered reveal teams-bottom-cta">
+          <div>
+            <p class="section-kicker">Keep Following The Tournament</p>
+            <h2>See how the field sets up for championship day.</h2>
+            <p>
+              Follow the bracket, support the scholarship mission, and keep the momentum going through tournament weekend.
+            </p>
+          </div>
+          <div class="teams-bottom-actions">
+            <a class="button button-secondary" href="/bracket.html">View the Bracket</a>
+            <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
+          </div>
         </section>
       </div>
     </main>
@@ -115,6 +141,9 @@
           name: "ATO",
           seed: "01",
           captain: "Duncan Tapscott",
+          status: "Returning Team",
+          accent: "accent-ato",
+          crest: "AT",
           roster: [
             "P: Griffin Brown",
             "C: Crawford Romanowski",
@@ -130,13 +159,40 @@
             "DH: Pete Stavros"
           ]
         },
-        { name: "SNU", seed: "02", captain: null, roster: ["TBD"] },
-        { name: "FIJI", seed: "03", captain: null, roster: ["TBD"] },
-        { name: "KA", seed: "04", captain: null, roster: ["TBD"] },
+        {
+          name: "SNU",
+          seed: "02",
+          captain: null,
+          status: "Returning Team",
+          accent: "accent-snu",
+          crest: "SN",
+          roster: ["TBD"]
+        },
+        {
+          name: "FIJI",
+          seed: "03",
+          captain: null,
+          status: "Returning Team",
+          accent: "accent-fiji",
+          crest: "FI",
+          roster: ["TBD"]
+        },
+        {
+          name: "KA",
+          seed: "04",
+          captain: null,
+          status: "Returning Team",
+          accent: "accent-ka",
+          crest: "KA",
+          roster: ["TBD"]
+        },
         {
           name: "FH",
           seed: "05",
           captain: null,
+          status: "New Team",
+          accent: "accent-fh",
+          crest: "FH",
           roster: [
             "James Sheffield",
             "Caleb Dover",
@@ -156,6 +212,9 @@
           name: "Lambda",
           seed: "06",
           captain: null,
+          status: "New Team",
+          accent: "accent-lambda",
+          crest: "LA",
           roster: [
             "Jackson Greene",
             "Connor Harris",
@@ -175,6 +234,9 @@
           name: "SAE",
           seed: "07",
           captain: null,
+          status: "New Team",
+          accent: "accent-sae",
+          crest: "SA",
           roster: [
             "Gram Thornton",
             "Robert Mitchell",
@@ -194,6 +256,9 @@
           name: "Phi Delt",
           seed: "08",
           captain: "Stephen Beatty",
+          status: "New Team",
+          accent: "accent-phidelt",
+          crest: "PD",
           roster: [
             "Brooks Roberts",
             "Zach Lightfoot",
@@ -231,7 +296,11 @@
               : `${team.roster.length + (team.captain ? 1 : 0)} Total`;
 
           return `
-            <article class="team-card reveal" style="transition-delay: ${index * 45}ms">
+            <article class="team-card team-card-expanded ${team.accent} reveal" style="transition-delay: ${index * 45}ms">
+              <div class="team-card-crest-row">
+                <span class="team-status-tag">${team.status}</span>
+                <div class="team-crest" aria-hidden="true">${team.crest}</div>
+              </div>
               <div class="team-card-top">
                 <span class="team-seed">${team.seed}</span>
                 <div class="team-title-block">

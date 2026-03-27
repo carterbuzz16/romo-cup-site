@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/logo-fallback.js" defer></script>
   </head>
-  <body class="bracket-page">
+  <body class="bracket-page bracket-page-updated">
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
@@ -46,37 +46,50 @@
         <section class="bracket-hero reveal">
           <span class="bracket-kicker">2026 Tournament</span>
           <h1>Romo Cup Bracket</h1>
-          <p>Double-elimination baseball with seeded matchups, 9 inning games, and a full week leading into championship Saturday.</p>
-          <div class="bracket-hero-meta">
+          <p>Follow the path to championship Saturday with a full double-elimination field, seeded matchups, and a live route from Round 1 to the final.</p>
+          <div class="bracket-hero-meta bracket-stat-cards">
             <div><strong>8 Teams</strong><span>Seeded tournament field</span></div>
-            <div><strong>Double Elimination</strong><span>Winners and losers brackets</span></div>
-            <div><strong>9 Inning Games</strong><span>Built for a full tournament week</span></div>
+            <div><strong>Double Elimination</strong><span>Two paths stay alive</span></div>
+            <div><strong>9 Inning Games</strong><span>Full-length tournament matchups</span></div>
           </div>
         </section>
 
-        <section class="section reveal bracket-format-card">
-          <div class="section-heading compact-heading">
-            <p class="section-kicker">Tournament Format</p>
-            <h2>Seeded path to the Romo Cup final.</h2>
-            <p class="section-intro">The field opens with four seeded Round 1 games, feeds into the winners bracket, and stays alive through a full losers bracket run before the championship closes the weekend.</p>
-          </div>
-          <div class="seed-list" aria-label="Tournament seeds">
-            <span class="seed-chip"><strong>1</strong><span>ATO</span></span>
-            <span class="seed-chip"><strong>2</strong><span>SNU</span></span>
-            <span class="seed-chip"><strong>3</strong><span>FIJI</span></span>
-            <span class="seed-chip"><strong>4</strong><span>KA</span></span>
-            <span class="seed-chip"><strong>5</strong><span>FH</span></span>
-            <span class="seed-chip"><strong>6</strong><span>Lambda</span></span>
-            <span class="seed-chip"><strong>7</strong><span>SAE</span></span>
-            <span class="seed-chip"><strong>8</strong><span>Phi Delt</span></span>
-          </div>
+        <section class="section reveal bracket-overview-grid">
+          <article class="bracket-format-card bracket-seed-board">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">Tournament Seeds</p>
+              <h2>The full field.</h2>
+              <p class="section-intro">Every team starts with a number and a path. Win through the winners bracket or fight back through the losers bracket for a shot at the cup.</p>
+            </div>
+            <div class="seed-list bracket-seed-list" aria-label="Tournament seeds">
+              <span class="seed-chip"><strong>1</strong><span>ATO</span></span>
+              <span class="seed-chip"><strong>2</strong><span>SNU</span></span>
+              <span class="seed-chip"><strong>3</strong><span>FIJI</span></span>
+              <span class="seed-chip"><strong>4</strong><span>KA</span></span>
+              <span class="seed-chip"><strong>5</strong><span>FH</span></span>
+              <span class="seed-chip"><strong>6</strong><span>Lambda</span></span>
+              <span class="seed-chip"><strong>7</strong><span>SAE</span></span>
+              <span class="seed-chip"><strong>8</strong><span>Phi Delt</span></span>
+            </div>
+          </article>
+
+          <aside class="bracket-format-card bracket-info-box">
+            <p class="section-kicker">Tournament Info</p>
+            <h2>How the bracket works.</h2>
+            <ul class="bracket-info-list">
+              <li><strong>Format:</strong> Double elimination means a team has to lose twice before it is out.</li>
+              <li><strong>Progression:</strong> Winners stay on the top path while one-loss teams fight through the losers bracket.</li>
+              <li><strong>Championship Saturday:</strong> The final stretch runs through Games 5-9, with Game 9 only needed if the losers bracket winner takes Game 8.</li>
+            </ul>
+          </aside>
         </section>
 
-        <section class="section reveal bracket-system-grid">
+        <section class="section reveal bracket-system-grid bracket-system-updated">
           <section class="bracket-stage winners-stage" aria-labelledby="winners-bracket-heading">
             <div class="section-heading compact-heading">
               <p class="section-kicker">Winners Bracket</p>
-              <h2 id="winners-bracket-heading">Rounds 1 through 5</h2>
+              <h2 id="winners-bracket-heading">Primary path to the final</h2>
+              <p class="section-intro">Win and advance. The winners bracket carries teams from the opening seed matchups straight into the championship round.</p>
             </div>
             <div class="round-grid winners-round-grid">
               <article class="round-column">
@@ -85,21 +98,25 @@
                   <p class="inning-pill">9 Inning Game</p>
                 </header>
                 <div class="round-stack">
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 1</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 1</p><span class="game-status-pill">Round Opener</span></div>
                     <p class="match-line"><strong>1. ATO</strong> vs <strong>8. Phi Delt</strong></p>
+                    <div class="game-meta-grid"><span>TBD Time</span><span>ATO Field</span><span>Winner advances to Game 5</span></div>
                   </article>
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 2</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 2</p><span class="game-status-pill">Round Opener</span></div>
                     <p class="match-line"><strong>2. SNU</strong> vs <strong>7. SAE</strong></p>
+                    <div class="game-meta-grid"><span>TBD Time</span><span>ATO Field</span><span>Winner advances to Game 6</span></div>
                   </article>
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 3</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 3</p><span class="game-status-pill">Round Opener</span></div>
                     <p class="match-line"><strong>4. KA</strong> vs <strong>5. FH</strong></p>
+                    <div class="game-meta-grid"><span>TBD Time</span><span>ATO Field</span><span>Winner advances to Game 5</span></div>
                   </article>
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 4</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 4</p><span class="game-status-pill">Round Opener</span></div>
                     <p class="match-line"><strong>3. FIJI</strong> vs <strong>6. Lambda</strong></p>
+                    <div class="game-meta-grid"><span>TBD Time</span><span>ATO Field</span><span>Winner advances to Game 6</span></div>
                   </article>
                 </div>
               </article>
@@ -110,13 +127,15 @@
                   <p class="inning-pill">9 Inning Game</p>
                 </header>
                 <div class="round-stack">
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 5</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 5</p><span class="game-status-pill">Saturday</span></div>
                     <p class="match-line"><strong>Winner of Game 1</strong> vs <strong>Winner of Game 3</strong></p>
+                    <div class="game-meta-grid"><span>11:00 AM</span><span>SNU Field</span><span>Winner advances to Game 7</span></div>
                   </article>
-                  <article class="match-card-advanced">
-                    <p class="game-label">Game 6</p>
+                  <article class="match-card-advanced bracket-game-card">
+                    <div class="bracket-game-top"><p class="game-label">Game 6</p><span class="game-status-pill">Saturday</span></div>
                     <p class="match-line"><strong>Winner of Game 2</strong> vs <strong>Winner of Game 4</strong></p>
+                    <div class="game-meta-grid"><span>11:50 AM</span><span>SNU Field</span><span>Winner advances to Game 7</span></div>
                   </article>
                 </div>
               </article>
@@ -127,9 +146,10 @@
                   <p class="inning-pill">9 Inning Game</p>
                 </header>
                 <div class="round-stack">
-                  <article class="match-card-advanced spotlight-match">
-                    <p class="game-label">Game 7</p>
+                  <article class="match-card-advanced bracket-game-card spotlight-match">
+                    <div class="bracket-game-top"><p class="game-label">Game 7</p><span class="game-status-pill">Saturday</span></div>
                     <p class="match-line"><strong>Winner of Game 5</strong> vs <strong>Winner of Game 6</strong></p>
+                    <div class="game-meta-grid"><span>4:00 PM</span><span>SNU Field</span><span>Winner advances to Game 8</span></div>
                   </article>
                 </div>
               </article>
@@ -140,9 +160,10 @@
                   <p class="inning-pill">9 Inning Game</p>
                 </header>
                 <div class="round-stack">
-                  <article class="match-card-advanced spotlight-match">
-                    <p class="game-label">Game 8</p>
+                  <article class="match-card-advanced bracket-game-card championship-spotlight">
+                    <div class="bracket-game-top"><p class="game-label">Game 8</p><span class="game-status-pill">Championship Round</span></div>
                     <p class="match-line"><strong>Winner of Game 7</strong> vs <strong>Winner of Loser 6</strong></p>
+                    <div class="game-meta-grid"><span>6:30 PM</span><span>SNU Field</span><span>Sets the final championship result unless Game 9 is needed</span></div>
                   </article>
                 </div>
               </article>
@@ -153,10 +174,11 @@
                   <p class="inning-pill">9 Inning Game</p>
                 </header>
                 <div class="round-stack">
-                  <article class="match-card-advanced championship-match-advanced">
-                    <p class="game-label">Game 9</p>
-                    <p class="match-line"><strong>If needed only</strong></p>
-                    <p class="game-note">Game 9 only if the losers bracket winner beats the Game 8 winner.</p>
+                  <article class="match-card-advanced bracket-game-card championship-match-advanced championship-if-needed">
+                    <div class="bracket-game-top"><p class="game-label">Game 9</p><span class="game-status-pill">If Needed</span></div>
+                    <p class="match-line"><strong>Only played if the losers bracket winner wins Game 8.</strong></p>
+                    <div class="game-meta-grid"><span>7:20 PM*</span><span>SNU Field</span><span>Final deciding game if the bracket resets</span></div>
+                    <p class="game-note">Game 9 is only played if the losers bracket winner beats the Game 8 winner.</p>
                   </article>
                 </div>
               </article>
@@ -166,33 +188,39 @@
           <section class="bracket-stage losers-stage" aria-labelledby="losers-bracket-heading">
             <div class="section-heading compact-heading">
               <p class="section-kicker">Losers Bracket</p>
-              <h2 id="losers-bracket-heading">Second path back to the final</h2>
-              <p class="section-intro">Lose once and the route gets tougher, but the bracket still leaves room for a run back into Game 8 and, if needed, Game 9.</p>
+              <h2 id="losers-bracket-heading">Second path back into the championship</h2>
+              <p class="section-intro">One loss is not the end. The losers bracket builds the long route back to Game 8 and possibly Game 9.</p>
             </div>
-            <div class="losers-grid">
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 1</p>
+            <div class="losers-grid bracket-losers-grid">
+              <article class="match-card-advanced loser-match-card bracket-game-card">
+                <div class="bracket-game-top"><p class="game-label">Loser 1</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Loser of Game 1</strong> vs <strong>Winner of Loser 2</strong></p>
+                <div class="game-meta-grid"><span>12:40 PM</span><span>SNU Field</span><span>Elimination game</span></div>
               </article>
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 2</p>
+              <article class="match-card-advanced loser-match-card bracket-game-card">
+                <div class="bracket-game-top"><p class="game-label">Loser 2</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Loser of Game 2</strong> vs <strong>Loser of Game 4</strong></p>
+                <div class="game-meta-grid"><span>1:30 PM</span><span>SNU Field</span><span>Elimination game</span></div>
               </article>
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 3</p>
+              <article class="match-card-advanced loser-match-card bracket-game-card">
+                <div class="bracket-game-top"><p class="game-label">Loser 3</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Winner of Loser 1</strong> vs <strong>Winner of Loser 2</strong></p>
+                <div class="game-meta-grid"><span>2:20 PM</span><span>SNU Field</span><span>Survive and advance</span></div>
               </article>
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 4</p>
+              <article class="match-card-advanced loser-match-card bracket-game-card">
+                <div class="bracket-game-top"><p class="game-label">Loser 4</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Loser of Game 3</strong> vs <strong>Loser of Game 6</strong></p>
+                <div class="game-meta-grid"><span>3:10 PM</span><span>SNU Field</span><span>Elimination game</span></div>
               </article>
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 5</p>
+              <article class="match-card-advanced loser-match-card bracket-game-card">
+                <div class="bracket-game-top"><p class="game-label">Loser 5</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Loser of Game 5</strong> vs <strong>Winner of Loser 3</strong></p>
+                <div class="game-meta-grid"><span>4:50 PM</span><span>SNU Field</span><span>Elimination game</span></div>
               </article>
-              <article class="match-card-advanced loser-match-card">
-                <p class="game-label">Loser 6</p>
+              <article class="match-card-advanced loser-match-card bracket-game-card championship-spotlight-subtle">
+                <div class="bracket-game-top"><p class="game-label">Loser 6</p><span class="game-status-pill">Saturday</span></div>
                 <p class="match-line"><strong>Winner of Loser 5</strong> vs <strong>Loser of Game 7</strong></p>
+                <div class="game-meta-grid"><span>5:40 PM</span><span>SNU Field</span><span>Winner advances to Game 8</span></div>
               </article>
             </div>
           </section>
@@ -202,6 +230,7 @@
           <div class="section-heading compact-heading">
             <p class="section-kicker">Schedule</p>
             <h2>Weekday openings and championship Saturday.</h2>
+            <p class="section-intro">Round 1 opens during the week at ATO Field, then the entire bracket closes on Saturday at SNU Field.</p>
           </div>
           <div class="schedule-grid-advanced">
             <article class="schedule-card-advanced">
@@ -245,14 +274,18 @@
           </div>
         </section>
 
-        <section class="section cta-block bracket-cta reveal">
+        <section class="section cta-block bracket-cta reveal bracket-bottom-cta">
           <div>
-            <h2>Come out, compete, and support the mission.</h2>
+            <p class="section-kicker">Stay In The Tournament Loop</p>
+            <h2>Track the field, then help power the mission behind it.</h2>
             <p>
-              Every matchup helps build momentum for the Will Romanowski Endowed Scholarship at Auburn University.
+              Follow every matchup through championship Saturday and support the Will Romanowski Endowed Scholarship at Auburn University.
             </p>
           </div>
-          <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
+          <div class="bracket-cta-actions">
+            <a class="button button-secondary" href="/teams/">View Teams</a>
+            <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
+          </div>
         </section>
       </div>
     </main>
