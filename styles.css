@@ -3417,27 +3417,27 @@ body {
 }
 
 .recognition-official-shell {
-  padding: 24px;
-  border-radius: 22px;
+  padding: 18px;
+  border-radius: 20px;
   border: 1px solid rgba(7, 36, 95, 0.1);
   background:
-    linear-gradient(135deg, rgba(6, 25, 72, 0.98), rgba(16, 58, 134, 0.94)),
+    linear-gradient(135deg, rgba(6, 25, 72, 0.96), rgba(16, 58, 134, 0.92)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
-  box-shadow: 0 18px 34px rgba(7, 28, 78, 0.12);
+  box-shadow: 0 14px 26px rgba(7, 28, 78, 0.1);
 }
 
 .recognition-official-grid {
   display: grid;
-  gap: 18px;
+  gap: 14px;
   align-items: center;
 }
 
 .recognition-official-photo-frame {
-  max-width: 320px;
+  max-width: 220px;
   margin: 0 auto;
-  border-radius: 22px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 16px 28px rgba(6, 17, 44, 0.24);
+  box-shadow: 0 12px 20px rgba(6, 17, 44, 0.2);
 }
 
 .recognition-official-copy {
@@ -3449,15 +3449,16 @@ body {
 }
 
 .recognition-official-copy h2 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #ffffff;
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
 }
 
 .recognition-official-fraternity {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
+  font-size: 0.82rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -3467,20 +3468,20 @@ body {
 }
 
 .recognition-official-shell-secondary {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .recognition-official-grid-secondary {
-  gap: 16px;
+  gap: 12px;
 }
 
 .recognition-official-photo-frame-secondary {
-  max-width: 260px;
+  max-width: 180px;
 }
 
 .recognition-official-copy-secondary h2 {
-  font-size: clamp(1.7rem, 2.5vw, 2.1rem);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
 }
 
 @media (min-width: 900px) {
@@ -3493,7 +3494,7 @@ body {
   }
 
   .recognition-official-grid {
-    grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1fr);
+    grid-template-columns: minmax(170px, 0.58fr) minmax(0, 1fr);
   }
 }
 
@@ -3504,9 +3505,12 @@ body {
 
   .recognition-hero,
   .recognition-founders-shell,
-  .recognition-thanks-shell,
-  .recognition-official-shell {
+  .recognition-thanks-shell {
     padding: 24px;
+  }
+
+  .recognition-official-shell {
+    padding: 16px;
   }
 }
 
