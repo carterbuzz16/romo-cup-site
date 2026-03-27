@@ -2853,3 +2853,317 @@ body {
   display: grid;
   gap: 10px;
 }
+
+/* Layout breathing room pass */
+.hero-inner,
+.teams-hero,
+.sponsors-hero,
+.bracket-hero {
+  gap: clamp(24px, 3vw, 34px);
+}
+
+.hero-content,
+.teams-hero-copy {
+  min-width: 0;
+}
+
+.hero p,
+.section-intro,
+.game-note,
+.schedule-match,
+.footer-mission {
+  line-height: 1.65;
+}
+
+.meta-panel {
+  min-height: 206px;
+  padding: clamp(20px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.meta-label {
+  margin-bottom: 0;
+}
+
+.countdown {
+  grid-template-columns: repeat(4, minmax(68px, 1fr));
+  gap: 10px;
+}
+
+.countdown-unit {
+  min-height: 88px;
+  padding: 14px 10px 12px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+}
+
+.countdown-number {
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
+  line-height: 1.05;
+}
+
+.countdown-label {
+  display: block;
+  line-height: 1.3;
+}
+
+.donation-stats {
+  row-gap: 10px;
+  margin-bottom: 2px;
+}
+
+.donation-raised {
+  line-height: 1.15;
+}
+
+.donation-goal,
+.donation-percent {
+  line-height: 1.45;
+}
+
+.donation-track {
+  min-height: 12px;
+  margin-top: 4px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 13px 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section.card,
+.card,
+.cta-block,
+.pillar-card,
+.testimonial-card,
+.one-pager-card,
+.current-sponsor-tier-block,
+.current-sponsor-card,
+.sponsor-tier-card,
+.bracket-format-card,
+.bracket-stage,
+.bracket-schedule-shell,
+.schedule-card-advanced,
+.match-card-advanced,
+.highlight-card,
+.teams-page .team-card {
+  overflow-wrap: break-word;
+}
+
+.section.card {
+  padding: clamp(24px, 3.8vw, 38px);
+}
+
+.card,
+.cta-block,
+.pillar-card,
+.testimonial-card,
+.one-pager-card,
+.current-sponsor-tier-block,
+.current-sponsor-card,
+.sponsor-tier-card,
+.bracket-format-card,
+.bracket-stage,
+.bracket-schedule-shell,
+.schedule-card-advanced,
+.match-card-advanced,
+.highlight-card,
+.teams-page .team-card {
+  padding: clamp(20px, 3vw, 28px);
+}
+
+.cta-block {
+  gap: 20px;
+}
+
+.cta-block h2,
+.section.card h2,
+.round-heading h2,
+.round-heading-block h2,
+.schedule-card-head h3,
+.current-sponsor-details h4,
+.sponsor-tier-card h3,
+.pillar-card h2,
+.team-title-block h2 {
+  line-height: 1.12;
+}
+
+.highlight-card figcaption,
+.current-sponsor-details p,
+.tier-benefits li,
+.match-line,
+.team-roster-item,
+.footer-links a,
+.footer-contact-list a {
+  line-height: 1.5;
+}
+
+.teams-page .team-card {
+  min-height: 100%;
+}
+
+.team-card-top,
+.team-card-bottom,
+.schedule-card-head,
+.footer-grid,
+.footer-links,
+.footer-contact-list,
+.seed-list,
+.hero-pills,
+.teams-hero-meta,
+.bracket-hero-meta,
+.sponsor-proof-row {
+  row-gap: 14px;
+}
+
+.team-captain-block,
+.team-card-bottom,
+.tier-sponsor-group,
+.current-sponsor-card,
+.schedule-card-head,
+.round-heading-block,
+.section-heading {
+  margin-top: 0;
+}
+
+.team-captain-block {
+  padding: 16px 18px;
+}
+
+.team-roster-item {
+  padding: 13px 0;
+}
+
+.team-count,
+.team-card-mark,
+.meta-label,
+.schedule-label,
+.round-title,
+.tier-group-label {
+  line-height: 1.35;
+}
+
+.match-card-advanced,
+.schedule-card-advanced,
+.current-sponsor-card,
+.sponsor-tier-card,
+.pillar-card,
+.testimonial-card {
+  min-height: 100%;
+}
+
+.seed-chip {
+  min-height: 68px;
+  padding: 16px 18px;
+}
+
+.current-sponsor-card {
+  gap: 20px;
+  padding: 20px;
+}
+
+.current-sponsor-logo {
+  width: 90px;
+  height: 90px;
+}
+
+.footer-grid {
+  gap: 32px;
+}
+
+.footer-links,
+.footer-contact-list {
+  gap: 12px;
+}
+
+.footer-links a,
+.footer-contact-list a {
+  padding: 2px 0;
+}
+
+@media (max-width: 900px) {
+  .meta-panel {
+    min-height: 0;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(82px, 1fr));
+    gap: 12px;
+  }
+
+  .countdown-unit {
+    min-height: 92px;
+  }
+
+  .hero-meta-grid {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 100%;
+  }
+
+  .section.card,
+  .card,
+  .cta-block,
+  .teams-page .team-card,
+  .sponsor-tier-card,
+  .current-sponsor-tier-block,
+  .current-sponsor-card,
+  .bracket-format-card,
+  .bracket-stage,
+  .bracket-schedule-shell,
+  .schedule-card-advanced,
+  .match-card-advanced,
+  .highlight-card {
+    padding: 22px;
+  }
+
+  .team-card-top {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .countdown {
+    grid-template-columns: repeat(2, minmax(96px, 1fr));
+  }
+
+  .countdown-unit {
+    min-height: 96px;
+    padding: 16px 12px 14px;
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+
+  .meta-panel,
+  .hero-pill,
+  .teams-hero-meta > div,
+  .bracket-hero-meta > div,
+  .sponsor-proof-row > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-grid {
+    gap: 28px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
