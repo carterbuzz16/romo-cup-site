@@ -52,11 +52,19 @@
         <section class="hero reveal" data-goal="26000" data-raised="9000.01">
           <div class="hero-inner">
             <article class="hero-content">
-              <span class="eyebrow">Annual Auburn Wiffle Ball Fundraiser</span>
+              <span class="eyebrow">Wiffle Ball Fundraiser</span>
               <h1>Play for More Than a Trophy</h1>
-              <p class="hero-summary">
-                Romo Cup turns one day of competition into lasting support for the Will Romanowski Endowed Scholarship at Auburn University.
+              <p>
+                The Romo Cup unites teams, families, and supporters to compete,
+                give back, and honor Romo through an annual day of purpose that
+                funds the Auburn University endowed scholarship, the Will "Romo"
+                Scholarship, awarded to an Auburn student each year.
               </p>
+              <div class="hero-pills">
+                <span class="hero-pill">April 25, 2026</span>
+                <span class="hero-pill">8 Teams Competing</span>
+                <span class="hero-pill">Endowed Scholarship Mission</span>
+              </div>
               <div class="hero-actions">
                 <a
                   class="button button-primary"
@@ -65,10 +73,47 @@
                 >
                 <a class="button button-secondary" href="/teams/">Meet the Teams</a>
               </div>
-              <div class="hero-pills hero-stat-row">
-                <span class="hero-pill">April 25, 2026</span>
-                <span class="hero-pill">8 Teams Competing</span>
-                <span class="hero-pill">Endowed Scholarship Mission</span>
+
+              <div class="hero-meta-grid">
+                <section class="meta-panel countdown-panel" aria-label="Tournament countdown">
+                  <p class="meta-label">Tournament Countdown</p>
+                  <div class="countdown" id="countdown">
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-days">00</span>
+                      <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-hours">00</span>
+                      <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-minutes">00</span>
+                      <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-unit">
+                      <span class="countdown-number" id="count-seconds">00</span>
+                      <span class="countdown-label">Seconds</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="meta-panel donation-panel" aria-label="Donation progress">
+                  <p class="meta-label">Donation Tracker</p>
+                  <div class="donation-stats">
+                    <p class="donation-raised" id="donation-raised">$9,000.01 Raised</p>
+                    <p class="donation-goal">Goal: $26,000</p>
+                  </div>
+                  <div
+                    class="donation-track"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="26000"
+                    aria-valuenow="9000.01"
+                  >
+                    <div class="donation-progress" id="donation-progress"></div>
+                  </div>
+                  <p class="donation-percent" id="donation-percent">34.6% of goal reached</p>
+                </section>
               </div>
             </article>
 
@@ -84,75 +129,6 @@
               </div>
               <figcaption class="hero-media-caption">Built on baseball, brotherhood, and purpose.</figcaption>
             </figure>
-          </div>
-        </section>
-
-        <section class="section reveal tournament-progress">
-          <div class="section-heading compact-heading">
-            <p class="section-kicker">Tournament Progress</p>
-            <h2>Momentum is building toward April 25.</h2>
-          </div>
-          <div class="progress-grid">
-            <section class="card progress-card countdown-panel" aria-label="Tournament countdown">
-              <p class="meta-label">Tournament Countdown</p>
-              <div class="countdown" id="countdown">
-                <div class="countdown-unit">
-                  <span class="countdown-number" id="count-days">00</span>
-                  <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-unit">
-                  <span class="countdown-number" id="count-hours">00</span>
-                  <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-unit">
-                  <span class="countdown-number" id="count-minutes">00</span>
-                  <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-unit">
-                  <span class="countdown-number" id="count-seconds">00</span>
-                  <span class="countdown-label">Seconds</span>
-                </div>
-              </div>
-            </section>
-
-            <section class="card progress-card donation-panel" aria-label="Donation progress">
-              <p class="meta-label">Donation Tracker</p>
-              <div class="donation-stats">
-                <p class="donation-raised" id="donation-raised">$9,000.01 Raised</p>
-                <p class="donation-goal">Goal: $26,000</p>
-              </div>
-              <div
-                class="donation-track"
-                role="progressbar"
-                aria-valuemin="0"
-                aria-valuemax="26000"
-                aria-valuenow="9000.01"
-              >
-                <div class="donation-progress" id="donation-progress"></div>
-              </div>
-              <p class="donation-percent" id="donation-percent">34.6% of goal reached</p>
-            </section>
-          </div>
-        </section>
-
-        <section class="section reveal impact-strip-shell">
-          <div class="impact-strip">
-            <article class="impact-card">
-              <strong>$9,000+</strong>
-              <span>Raised</span>
-            </article>
-            <article class="impact-card">
-              <strong>$26,000</strong>
-              <span>Goal</span>
-            </article>
-            <article class="impact-card">
-              <strong>8 Teams</strong>
-              <span>Competing</span>
-            </article>
-            <article class="impact-card">
-              <strong>Auburn Scholarship</strong>
-              <span>Legacy</span>
-            </article>
           </div>
         </section>
 
@@ -220,29 +196,12 @@
         <section class="section card reveal support-block">
           <p class="section-kicker">Get Involved</p>
           <h2>How to Support</h2>
-          <p class="section-intro">Every donation, share, roster spot, and sponsor relationship helps turn one day of competition into lasting support for Auburn students.</p>
-          <div class="support-card-grid">
-            <article class="support-card">
-              <h3>Donate</h3>
-              <p>Give directly to the scholarship fund and help move the mission toward its goal.</p>
-              <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
-            </article>
-            <article class="support-card">
-              <h3>Share</h3>
-              <p>Spread the story of Romo Cup so more families, alumni, and students can support it.</p>
-              <a class="button button-outline" href="/about/">Read the Story</a>
-            </article>
-            <article class="support-card">
-              <h3>Play / Join</h3>
-              <p>Step onto the field, represent your chapter, and help carry the tournament forward.</p>
-              <a class="button button-outline" href="/teams/">Meet the Teams</a>
-            </article>
-            <article class="support-card">
-              <h3>Sponsors</h3>
-              <p>Support the event publicly and help elevate the tournament experience across Auburn.</p>
-              <a class="button button-outline" href="/sponsors/">View Sponsors</a>
-            </article>
-          </div>
+          <p class="section-intro">Every donation, share, and roster spot helps turn one day of competition into lasting support for Auburn students.</p>
+          <ul class="support-list">
+            <li><strong>Donate</strong>: Give directly to the scholarship fund.</li>
+            <li><strong>Share</strong>: Spread the mission with friends and family.</li>
+            <li><strong>Play / Join</strong>: Participate in the Romo Cup and keep the legacy moving.</li>
+          </ul>
         </section>
 
         <section class="section card reveal curated-highlights">
@@ -290,15 +249,6 @@
               <figcaption>Friendship, joy, and the people who carry Will’s legacy forward.</figcaption>
             </figure>
           </div>
-        </section>
-
-        <section class="section cta-block homepage-cta-band reveal">
-          <div>
-            <p class="section-kicker">Play for More</p>
-            <h2>Help build something that lasts beyond tournament day.</h2>
-            <p>Every gift supports the Will Romanowski Endowed Scholarship and the community carrying Romo Cup forward.</p>
-          </div>
-          <a class="button button-primary" href="https://give.auburn.edu/campaigns/the-will-romanowski-scholarship-fund/?appeal_id=699e1127aa0a1dcb6645dd9e">Donate Now</a>
         </section>
       </div>
     </main>
