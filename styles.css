@@ -2889,26 +2889,27 @@ body {
 }
 
 .countdown {
-  grid-template-columns: repeat(4, minmax(68px, 1fr));
-  gap: 10px;
-}
-
-.countdown-unit {
-  min-height: 88px;
-  padding: 14px 10px 12px;
-  display: grid;
-  align-content: center;
+  grid-template-columns: repeat(4, minmax(60px, 1fr));
   gap: 8px;
 }
 
+.countdown-unit {
+  min-height: 74px;
+  padding: 11px 8px 10px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+}
+
 .countdown-number {
-  font-size: clamp(1.4rem, 2vw, 1.7rem);
-  line-height: 1.05;
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  line-height: 1.02;
 }
 
 .countdown-label {
   display: block;
-  line-height: 1.3;
+  font-size: 0.68rem;
+  line-height: 1.2;
 }
 
 .donation-stats {
@@ -3093,12 +3094,13 @@ body {
   }
 
   .countdown {
-    grid-template-columns: repeat(2, minmax(82px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(72px, 1fr));
+    gap: 10px;
   }
 
   .countdown-unit {
-    min-height: 92px;
+    min-height: 80px;
+    padding: 12px 10px;
   }
 
   .hero-meta-grid {
@@ -3138,16 +3140,17 @@ body {
 
 @media (max-width: 640px) {
   .countdown {
-    grid-template-columns: repeat(2, minmax(96px, 1fr));
+    grid-template-columns: repeat(2, minmax(82px, 1fr));
+    gap: 10px;
   }
 
   .countdown-unit {
-    min-height: 96px;
-    padding: 16px 12px 14px;
+    min-height: 84px;
+    padding: 12px 10px 11px;
   }
 
   .countdown-number {
-    font-size: 1.5rem;
+    font-size: 1.28rem;
   }
 
   .meta-panel,
