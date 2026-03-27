@@ -3705,3 +3705,337 @@ body {
     padding: 20px;
   }
 }
+
+
+/* Homepage hero countdown cleanup */
+.hero-pills {
+  align-items: flex-start;
+}
+
+.hero-pill {
+  min-width: 0;
+}
+
+.hero-meta-grid {
+  align-items: stretch;
+}
+
+.countdown-panel {
+  padding: 20px 20px 18px;
+  gap: 14px;
+  justify-content: flex-start;
+}
+
+.countdown-panel .meta-label {
+  margin-bottom: 2px;
+}
+
+.countdown-panel .countdown {
+  align-items: stretch;
+  grid-template-columns: repeat(4, minmax(58px, 1fr));
+  gap: 9px;
+}
+
+.countdown-panel .countdown-unit {
+  min-height: 70px;
+  padding: 11px 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 17, 42, 0.22);
+}
+
+.countdown-panel .countdown-number {
+  font-size: clamp(1.12rem, 1.5vw, 1.34rem);
+  letter-spacing: -0.02em;
+}
+
+.countdown-panel .countdown-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 900px) {
+  .countdown-panel {
+    padding: 18px;
+  }
+
+  .countdown-panel .countdown {
+    grid-template-columns: repeat(2, minmax(76px, 1fr));
+    gap: 9px;
+  }
+}
+
+@media (max-width: 640px) {
+  .countdown-panel {
+    padding: 16px;
+  }
+
+  .countdown-panel .countdown-unit {
+    min-height: 72px;
+  }
+}
+
+/* Bracket page premium simplification */
+.bracket-page-branded .bracket-hero-refined {
+  display: grid;
+  gap: 24px;
+}
+
+.bracket-page-branded .bracket-hero-copy {
+  max-width: 760px;
+}
+
+.bracket-page-branded .bracket-hero p {
+  max-width: 40rem;
+}
+
+.bracket-stat-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.bracket-stat-grid > div {
+  min-width: 0;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.bracket-overview-shell,
+.bracket-stage-shell,
+.championship-shell,
+.schedule-shell-refined {
+  margin-top: 26px;
+}
+
+.bracket-overview-shell {
+  display: grid;
+  gap: 22px;
+}
+
+.bracket-seed-panel,
+.bracket-info-panel {
+  min-height: 100%;
+}
+
+.bracket-seed-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bracket-page-branded .seed-chip {
+  min-height: 74px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(247, 250, 255, 1));
+  box-shadow: 0 12px 24px rgba(8, 31, 84, 0.06);
+}
+
+.bracket-page-branded .seed-chip span {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.bracket-info-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.bracket-info-list li {
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(7, 36, 95, 0.08);
+  background: rgba(7, 36, 95, 0.03);
+  color: var(--text);
+}
+
+.bracket-round-board {
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.bracket-page-branded .round-column {
+  min-width: 0;
+}
+
+.bracket-match-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(247, 250, 255, 1));
+}
+
+.bracket-match-card .game-label {
+  margin-bottom: 10px;
+}
+
+.bracket-match-card .game-note {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.bracket-losers-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.championship-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.championship-card-featured {
+  position: relative;
+  border-color: rgba(255, 106, 19, 0.24);
+  background: linear-gradient(135deg, rgba(255, 247, 240, 1), rgba(247, 250, 255, 1));
+  box-shadow: 0 18px 34px rgba(255, 106, 19, 0.12);
+}
+
+.if-needed-card {
+  border-color: rgba(255, 106, 19, 0.34);
+}
+
+.championship-flag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin-bottom: 12px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(255, 106, 19, 0.12);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.schedule-grid-refined {
+  gap: 18px;
+}
+
+.schedule-timeline-list li {
+  position: relative;
+  grid-template-columns: 82px 1fr;
+}
+
+.schedule-timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: 38px;
+  top: -12px;
+  bottom: -12px;
+  width: 1px;
+  background: rgba(7, 36, 95, 0.08);
+}
+
+.schedule-timeline-list li:first-child::before {
+  top: 18px;
+}
+
+.schedule-timeline-list li:last-child::before {
+  bottom: 18px;
+}
+
+.schedule-timeline-list .schedule-time {
+  position: relative;
+}
+
+.schedule-timeline-list .schedule-time::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255, 106, 19, 0.12);
+}
+
+.bracket-cta-refined {
+  align-items: center;
+}
+
+.bracket-cta-refined h2,
+.bracket-cta-refined .section-kicker {
+  color: #ffffff;
+}
+
+.bracket-cta-refined p:not(.section-kicker) {
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.bracket-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .bracket-stat-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .bracket-overview-shell {
+    grid-template-columns: 1.2fr 0.9fr;
+  }
+
+  .championship-grid,
+  .schedule-grid-refined {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .bracket-losers-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .bracket-seed-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .bracket-round-board {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .bracket-losers-board,
+  .championship-grid,
+  .schedule-grid-refined {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-timeline-list li {
+    grid-template-columns: 74px 1fr;
+  }
+
+  .schedule-timeline-list li::before {
+    left: 34px;
+  }
+
+  .schedule-timeline-list .schedule-time::after {
+    right: -13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bracket-stat-grid,
+  .bracket-seed-grid,
+  .bracket-cta-actions {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
