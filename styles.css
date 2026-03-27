@@ -3466,6 +3466,23 @@ body {
   margin-bottom: 0;
 }
 
+.recognition-official-shell-secondary {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.recognition-official-grid-secondary {
+  gap: 16px;
+}
+
+.recognition-official-photo-frame-secondary {
+  max-width: 260px;
+}
+
+.recognition-official-copy-secondary h2 {
+  font-size: clamp(1.7rem, 2.5vw, 2.1rem);
+}
+
 @media (min-width: 900px) {
   .founder-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
