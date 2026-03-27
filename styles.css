@@ -3170,3 +3170,66 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Countdown panel rebalance */
+.countdown-panel {
+  min-height: 0;
+  padding: 18px 18px 16px;
+  gap: 12px;
+}
+
+.countdown-panel .countdown {
+  grid-template-columns: repeat(4, minmax(54px, 1fr));
+  gap: 7px;
+}
+
+.countdown-panel .countdown-unit {
+  min-height: 68px;
+  padding: 10px 7px 9px;
+  gap: 5px;
+}
+
+.countdown-panel .countdown-number {
+  font-size: clamp(1.08rem, 1.45vw, 1.3rem);
+}
+
+.countdown-panel .countdown-label {
+  font-size: 0.64rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 900px) {
+  .countdown-panel {
+    padding: 16px;
+  }
+
+  .countdown-panel .countdown {
+    grid-template-columns: repeat(2, minmax(70px, 1fr));
+    gap: 8px;
+  }
+
+  .countdown-panel .countdown-unit {
+    min-height: 72px;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .countdown-panel {
+    padding: 15px;
+  }
+
+  .countdown-panel .countdown {
+    grid-template-columns: repeat(2, minmax(74px, 1fr));
+  }
+
+  .countdown-panel .countdown-unit {
+    min-height: 74px;
+    padding: 10px 8px 9px;
+  }
+
+  .countdown-panel .countdown-number {
+    font-size: 1.16rem;
+  }
+}
