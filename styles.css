@@ -4424,21 +4424,25 @@ body {
 }
 
 .bracket-page-vibrant .winners-stage {
-  background: linear-gradient(180deg, rgba(8, 28, 76, 0.98), rgba(10, 47, 116, 0.96));
+  background: linear-gradient(180deg, rgba(230, 238, 251, 0.96), rgba(214, 227, 247, 0.94));
+  border-color: rgba(7, 36, 95, 0.12);
 }
 
 .bracket-page-vibrant .losers-stage {
-  background: linear-gradient(180deg, rgba(9, 35, 87, 0.96), rgba(7, 27, 70, 0.96));
+  background: linear-gradient(180deg, rgba(220, 231, 248, 0.94), rgba(205, 221, 245, 0.92));
+  border-color: rgba(7, 36, 95, 0.12);
 }
 
 .bracket-page-vibrant .championship-shell {
-  background: linear-gradient(135deg, rgba(14, 43, 101, 0.98), rgba(255, 106, 19, 0.16));
-  border-color: rgba(255, 106, 19, 0.24);
-  box-shadow: 0 22px 42px rgba(255, 106, 19, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(255, 106, 19, 0.16), transparent 28%),
+    linear-gradient(135deg, rgba(255, 252, 248, 0.98), rgba(245, 249, 255, 0.98));
+  border-color: rgba(255, 106, 19, 0.28);
+  box-shadow: 0 24px 46px rgba(255, 106, 19, 0.12);
 }
 
 .bracket-page-vibrant .schedule-shell-refined {
-  background: linear-gradient(180deg, rgba(12, 38, 89, 0.94), rgba(245, 248, 255, 0.98) 18%, rgba(255, 255, 255, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(232, 239, 251, 0.95), rgba(255, 255, 255, 0.98) 20%, rgba(255, 255, 255, 0.98) 100%);
 }
 
 .bracket-page-vibrant .winners-stage h2,
@@ -4448,8 +4452,10 @@ body {
 .bracket-page-vibrant .winners-stage .section-intro,
 .bracket-page-vibrant .losers-stage .section-intro,
 .bracket-page-vibrant .winners-stage .round-title,
-.bracket-page-vibrant .losers-stage .round-title {
-  color: #ffffff;
+.bracket-page-vibrant .losers-stage .round-title,
+.bracket-page-vibrant .championship-shell h2,
+.bracket-page-vibrant .championship-shell .section-kicker {
+  color: var(--primary);
 }
 
 .bracket-stage-badge {
@@ -4469,8 +4475,8 @@ body {
 
 .bracket-page-vibrant .winners-stage .bracket-stage-badge,
 .bracket-page-vibrant .losers-stage .bracket-stage-badge {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffd1b5;
+  background: rgba(255, 106, 19, 0.12);
+  color: var(--accent);
 }
 
 .bracket-stage-badge.championship-badge {
@@ -4506,8 +4512,8 @@ body {
 .bracket-page-vibrant .vibrant-round-column {
   padding: 16px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(7, 36, 95, 0.1);
 }
 
 .bracket-page-vibrant .round-heading-block {
@@ -4515,20 +4521,20 @@ body {
 }
 
 .bracket-page-vibrant .inning-pill {
-  background: rgba(255, 106, 19, 0.16);
-  color: #ffe1cb;
-  border: 1px solid rgba(255, 106, 19, 0.24);
+  background: rgba(255, 106, 19, 0.14);
+  color: var(--accent);
+  border: 1px solid rgba(255, 106, 19, 0.2);
 }
 
 .bracket-page-vibrant .vibrant-match-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(6, 22, 61, 0.92), rgba(10, 33, 84, 0.9));
-  color: #ffffff;
-  box-shadow: 0 16px 30px rgba(6, 19, 50, 0.18);
+  border: 1px solid rgba(7, 36, 95, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.98));
+  color: var(--primary);
+  box-shadow: 0 14px 24px rgba(7, 28, 78, 0.08);
 }
 
 .bracket-page-vibrant .losers-stage .vibrant-match-card {
-  background: linear-gradient(180deg, rgba(5, 18, 50, 0.92), rgba(7, 27, 68, 0.9));
+  background: linear-gradient(180deg, rgba(249, 251, 255, 0.98), rgba(241, 246, 255, 0.98));
 }
 
 .bracket-page-vibrant .vibrant-match-card .game-label {
@@ -4537,37 +4543,67 @@ body {
   min-height: 28px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(255, 106, 19, 0.16);
-  color: #ffd8be;
+  background: rgba(255, 106, 19, 0.14);
+  color: var(--accent);
 }
 
 .bracket-page-vibrant .vibrant-match-card .match-line,
 .bracket-page-vibrant .vibrant-match-card .game-note {
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--primary);
 }
 
 .bracket-page-vibrant .spotlight-match,
 .bracket-page-vibrant .championship-card-featured {
-  border-color: rgba(255, 106, 19, 0.34);
-  box-shadow: 0 22px 36px rgba(255, 106, 19, 0.14);
+  border-color: rgba(255, 106, 19, 0.3);
+  box-shadow: 0 20px 34px rgba(255, 106, 19, 0.12);
 }
 
 .bracket-page-vibrant .championship-card-featured {
-  background: linear-gradient(135deg, rgba(10, 33, 84, 0.98), rgba(255, 106, 19, 0.16));
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 247, 240, 0.98)),
+    linear-gradient(180deg, rgba(255, 106, 19, 0.08), rgba(7, 36, 95, 0.03));
+  border: 1px solid rgba(255, 106, 19, 0.24);
 }
 
 .bracket-page-vibrant .if-needed-card {
-  background: linear-gradient(135deg, rgba(10, 33, 84, 0.94), rgba(255, 106, 19, 0.22));
+  background: linear-gradient(135deg, rgba(255, 250, 246, 0.98), rgba(255, 243, 232, 0.98));
 }
 
 .bracket-page-vibrant .championship-flag {
-  background: rgba(255, 106, 19, 0.18);
+  background: linear-gradient(135deg, var(--accent), #ff8a3d);
   color: #ffffff;
+  box-shadow: 0 10px 18px rgba(255, 106, 19, 0.24);
+}
+
+.bracket-page-vibrant .championship-grid {
+  align-items: stretch;
+}
+
+.bracket-page-vibrant .championship-card-featured .match-line {
+  font-size: 1.06rem;
+  font-weight: 800;
+}
+
+.bracket-page-vibrant .championship-card-featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 106, 19, 0.45), rgba(7, 36, 95, 0.12));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.bracket-page-vibrant .championship-shell .section-heading {
+  margin-bottom: 18px;
 }
 
 .bracket-page-vibrant .vibrant-schedule-card {
   border: 1px solid rgba(7, 36, 95, 0.12);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 249, 255, 0.98));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 255, 0.98));
   box-shadow: 0 16px 30px rgba(7, 28, 78, 0.08);
 }
 
