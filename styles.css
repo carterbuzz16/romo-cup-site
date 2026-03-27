@@ -3785,7 +3785,7 @@ body {
 
 /* Homepage hero countdown cleanup */
 .hero-pills {
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .hero-pill {
@@ -3796,9 +3796,14 @@ body {
   align-items: stretch;
 }
 
+.countdown-panel,
+.donation-panel {
+  min-height: 0;
+}
+
 .countdown-panel {
-  padding: 20px 20px 18px;
-  gap: 14px;
+  padding: 18px;
+  gap: 12px;
   justify-content: flex-start;
 }
 
@@ -3807,47 +3812,64 @@ body {
 }
 
 .countdown-panel .countdown {
+  display: grid;
   align-items: stretch;
-  grid-template-columns: repeat(4, minmax(58px, 1fr));
-  gap: 9px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
 }
 
 .countdown-panel .countdown-unit {
-  min-height: 70px;
-  padding: 11px 8px 10px;
+  min-width: 0;
+  min-height: 64px;
+  padding: 10px 6px 9px;
+  gap: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
   background: rgba(7, 17, 42, 0.22);
 }
 
 .countdown-panel .countdown-number {
-  font-size: clamp(1.12rem, 1.5vw, 1.34rem);
+  font-size: clamp(1rem, 1.3vw, 1.22rem);
+  line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .countdown-panel .countdown-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  font-size: 0.61rem;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.72);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .countdown-panel {
-    padding: 18px;
+    padding: 17px;
   }
 
   .countdown-panel .countdown {
-    grid-template-columns: repeat(2, minmax(76px, 1fr));
-    gap: 9px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 }
 
 @media (max-width: 640px) {
-  .countdown-panel {
+  .countdown-panel,
+  .donation-panel {
     padding: 16px;
   }
 
   .countdown-panel .countdown-unit {
-    min-height: 72px;
+    min-height: 66px;
+    padding: 10px 8px;
+  }
+
+  .countdown-panel .countdown-number {
+    font-size: 1.08rem;
+  }
+
+  .countdown-panel .countdown-label {
+    font-size: 0.6rem;
   }
 }
 
@@ -4326,5 +4348,262 @@ body {
   .sponsors-page-pitch .sponsors-hero-actions,
   .sponsors-final-band .sponsors-final-actions {
     width: 100%;
+  }
+}
+
+
+/* Bracket page vibrant refresh */
+.bracket-page-vibrant {
+  background:
+    radial-gradient(circle at top left, rgba(255, 106, 19, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 10%, rgba(16, 58, 134, 0.2), transparent 24%),
+    linear-gradient(180deg, #eef3fc 0%, #e8eef9 100%);
+}
+
+.bracket-page-vibrant .bracket-hero-refined {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 42px);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(5, 22, 66, 0.98), rgba(10, 47, 116, 0.96)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  box-shadow: 0 28px 52px rgba(6, 23, 67, 0.22);
+}
+
+.bracket-page-vibrant .bracket-hero-refined::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0, transparent 80%, rgba(255, 255, 255, 0.06) 80%, rgba(255, 255, 255, 0.06) 81%, transparent 81%),
+    linear-gradient(180deg, transparent 0, transparent 74%, rgba(255, 255, 255, 0.05) 74%, rgba(255, 255, 255, 0.05) 75%, transparent 75%);
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.bracket-page-vibrant .bracket-hero-copy,
+.bracket-page-vibrant .bracket-hero-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.bracket-page-vibrant .bracket-hero h1,
+.bracket-page-vibrant .bracket-hero p,
+.bracket-page-vibrant .bracket-kicker {
+  color: #ffffff;
+}
+
+.bracket-page-vibrant .bracket-hero p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.bracket-page-vibrant .bracket-stat-grid > div {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.bracket-page-vibrant .bracket-stat-grid strong,
+.bracket-page-vibrant .bracket-stat-grid span {
+  color: #ffffff;
+}
+
+.bracket-page-vibrant .bracket-overview-shell,
+.bracket-page-vibrant .winners-stage,
+.bracket-page-vibrant .losers-stage,
+.bracket-page-vibrant .championship-shell,
+.bracket-page-vibrant .schedule-shell-refined {
+  border-radius: 26px;
+  padding: 26px;
+  border: 1px solid rgba(7, 36, 95, 0.08);
+  box-shadow: 0 18px 38px rgba(7, 28, 78, 0.1);
+}
+
+.bracket-page-vibrant .bracket-overview-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 250, 255, 0.95));
+}
+
+.bracket-page-vibrant .winners-stage {
+  background: linear-gradient(180deg, rgba(8, 28, 76, 0.98), rgba(10, 47, 116, 0.96));
+}
+
+.bracket-page-vibrant .losers-stage {
+  background: linear-gradient(180deg, rgba(9, 35, 87, 0.96), rgba(7, 27, 70, 0.96));
+}
+
+.bracket-page-vibrant .championship-shell {
+  background: linear-gradient(135deg, rgba(14, 43, 101, 0.98), rgba(255, 106, 19, 0.16));
+  border-color: rgba(255, 106, 19, 0.24);
+  box-shadow: 0 22px 42px rgba(255, 106, 19, 0.16);
+}
+
+.bracket-page-vibrant .schedule-shell-refined {
+  background: linear-gradient(180deg, rgba(12, 38, 89, 0.94), rgba(245, 248, 255, 0.98) 18%, rgba(255, 255, 255, 0.98) 100%);
+}
+
+.bracket-page-vibrant .winners-stage h2,
+.bracket-page-vibrant .losers-stage h2,
+.bracket-page-vibrant .winners-stage .section-kicker,
+.bracket-page-vibrant .losers-stage .section-kicker,
+.bracket-page-vibrant .winners-stage .section-intro,
+.bracket-page-vibrant .losers-stage .section-intro,
+.bracket-page-vibrant .winners-stage .round-title,
+.bracket-page-vibrant .losers-stage .round-title {
+  color: #ffffff;
+}
+
+.bracket-stage-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 10px 0 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 106, 19, 0.14);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bracket-page-vibrant .winners-stage .bracket-stage-badge,
+.bracket-page-vibrant .losers-stage .bracket-stage-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffd1b5;
+}
+
+.bracket-stage-badge.championship-badge {
+  background: rgba(255, 106, 19, 0.18);
+  color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(255, 106, 19, 0.28) inset;
+}
+
+.bracket-stage-badge.schedule-badge {
+  background: rgba(7, 36, 95, 0.08);
+}
+
+.bracket-page-vibrant .bracket-format-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(244, 248, 255, 1));
+  border: 1px solid rgba(7, 36, 95, 0.1);
+}
+
+.bracket-page-vibrant .seed-chip {
+  border: 1px solid rgba(255, 106, 19, 0.22);
+  background: linear-gradient(135deg, rgba(7, 36, 95, 0.98), rgba(16, 58, 134, 0.95));
+  box-shadow: 0 16px 28px rgba(7, 28, 78, 0.12);
+}
+
+.bracket-page-vibrant .seed-chip strong,
+.bracket-page-vibrant .seed-chip span {
+  color: #ffffff;
+}
+
+.bracket-page-vibrant .seed-chip strong {
+  color: #ffb37b;
+}
+
+.bracket-page-vibrant .vibrant-round-column {
+  padding: 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bracket-page-vibrant .round-heading-block {
+  margin-bottom: 14px;
+}
+
+.bracket-page-vibrant .inning-pill {
+  background: rgba(255, 106, 19, 0.16);
+  color: #ffe1cb;
+  border: 1px solid rgba(255, 106, 19, 0.24);
+}
+
+.bracket-page-vibrant .vibrant-match-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(6, 22, 61, 0.92), rgba(10, 33, 84, 0.9));
+  color: #ffffff;
+  box-shadow: 0 16px 30px rgba(6, 19, 50, 0.18);
+}
+
+.bracket-page-vibrant .losers-stage .vibrant-match-card {
+  background: linear-gradient(180deg, rgba(5, 18, 50, 0.92), rgba(7, 27, 68, 0.9));
+}
+
+.bracket-page-vibrant .vibrant-match-card .game-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 106, 19, 0.16);
+  color: #ffd8be;
+}
+
+.bracket-page-vibrant .vibrant-match-card .match-line,
+.bracket-page-vibrant .vibrant-match-card .game-note {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.bracket-page-vibrant .spotlight-match,
+.bracket-page-vibrant .championship-card-featured {
+  border-color: rgba(255, 106, 19, 0.34);
+  box-shadow: 0 22px 36px rgba(255, 106, 19, 0.14);
+}
+
+.bracket-page-vibrant .championship-card-featured {
+  background: linear-gradient(135deg, rgba(10, 33, 84, 0.98), rgba(255, 106, 19, 0.16));
+}
+
+.bracket-page-vibrant .if-needed-card {
+  background: linear-gradient(135deg, rgba(10, 33, 84, 0.94), rgba(255, 106, 19, 0.22));
+}
+
+.bracket-page-vibrant .championship-flag {
+  background: rgba(255, 106, 19, 0.18);
+  color: #ffffff;
+}
+
+.bracket-page-vibrant .vibrant-schedule-card {
+  border: 1px solid rgba(7, 36, 95, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 249, 255, 0.98));
+  box-shadow: 0 16px 30px rgba(7, 28, 78, 0.08);
+}
+
+.bracket-page-vibrant .vibrant-saturday-card {
+  background: linear-gradient(180deg, rgba(255, 247, 240, 0.96), rgba(255, 255, 255, 0.98));
+  border-color: rgba(255, 106, 19, 0.18);
+}
+
+.bracket-page-vibrant .schedule-note-pill,
+.bracket-page-vibrant .schedule-time {
+  color: var(--accent);
+}
+
+.bracket-page-vibrant .schedule-time {
+  font-weight: 800;
+}
+
+.bracket-page-vibrant .schedule-timeline-list li::before {
+  background: rgba(255, 106, 19, 0.16);
+}
+
+.bracket-page-vibrant .bracket-cta-refined {
+  border: 1px solid rgba(255, 106, 19, 0.16);
+  box-shadow: 0 18px 36px rgba(7, 28, 78, 0.18);
+}
+
+@media (max-width: 760px) {
+  .bracket-page-vibrant .bracket-overview-shell,
+  .bracket-page-vibrant .winners-stage,
+  .bracket-page-vibrant .losers-stage,
+  .bracket-page-vibrant .championship-shell,
+  .bracket-page-vibrant .schedule-shell-refined {
+    padding: 20px;
+  }
+
+  .bracket-page-vibrant .vibrant-round-column {
+    padding: 14px;
   }
 }
