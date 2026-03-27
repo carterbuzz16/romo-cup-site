@@ -3416,6 +3416,55 @@ body {
   margin-right: auto;
 }
 
+.recognition-official-shell {
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(7, 36, 95, 0.1);
+  background:
+    linear-gradient(135deg, rgba(6, 25, 72, 0.98), rgba(16, 58, 134, 0.94)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+  box-shadow: 0 22px 44px rgba(7, 28, 78, 0.14);
+}
+
+.recognition-official-grid {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.recognition-official-photo-frame {
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 34px rgba(6, 17, 44, 0.28);
+}
+
+.recognition-official-copy {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.recognition-official-copy .section-kicker {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.recognition-official-copy h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.recognition-official-fraternity {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.recognition-official-copy p:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 900px) {
   .founder-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3423,6 +3472,10 @@ body {
 
   .recognition-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .recognition-official-grid {
+    grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
   }
 }
 
@@ -3433,7 +3486,8 @@ body {
 
   .recognition-hero,
   .recognition-founders-shell,
-  .recognition-thanks-shell {
+  .recognition-thanks-shell,
+  .recognition-official-shell {
     padding: 24px;
   }
 }
