@@ -115,6 +115,8 @@
         {
           name: "ATO",
           seed: "01",
+          logo: "/assets/images/team-logos/ato.png",
+          logoAlt: "Alpha Tau Omega crest",
           captain: "Duncan Tapscott",
           roster: [
             "P: Griffin Brown",
@@ -131,12 +133,14 @@
             "DH: Pete Stavros"
           ]
         },
-        { name: "SNU", seed: "02", captain: null, roster: ["TBD"] },
-        { name: "FIJI", seed: "03", captain: null, roster: ["TBD"] },
-        { name: "KA", seed: "04", captain: null, roster: ["TBD"] },
+        { name: "SNU", seed: "02", logo: "/assets/images/team-logos/snu.png", logoAlt: "Sigma Nu crest", captain: null, roster: ["TBD"] },
+        { name: "FIJI", seed: "03", logo: "/assets/images/team-logos/fiji.png", logoAlt: "FIJI crest", captain: null, roster: ["TBD"] },
+        { name: "KA", seed: "04", logo: "/assets/images/team-logos/ka.jpg", logoAlt: "Kappa Alpha crest", captain: null, roster: ["TBD"] },
         {
           name: "FH",
           seed: "05",
+          logo: "/assets/images/team-logos/farmhouse.gif",
+          logoAlt: "FarmHouse crest",
           captain: null,
           roster: [
             "James Sheffield",
@@ -156,6 +160,8 @@
         {
           name: "Lambda",
           seed: "06",
+          logo: "/assets/images/team-logos/lambda.png",
+          logoAlt: "Lambda Chi Alpha crest",
           captain: null,
           roster: [
             "Jackson Greene",
@@ -175,6 +181,8 @@
         {
           name: "SAE",
           seed: "07",
+          logo: "/assets/images/team-logos/sae.png",
+          logoAlt: "Sigma Alpha Epsilon crest",
           captain: null,
           roster: [
             "Gram Thornton",
@@ -194,6 +202,8 @@
         {
           name: "Phi Delt",
           seed: "08",
+          logo: "/assets/images/team-logos/phi-delt.png",
+          logoAlt: "Phi Delta Theta crest",
           captain: "Stephen Beatty",
           roster: [
             "Brooks Roberts",
@@ -231,14 +241,25 @@
               ? "Roster TBD"
               : `${team.roster.length + (team.captain ? 1 : 0)} Total`;
 
+          const teamLogo = team.logo
+            ? `
+              <div class="team-logo-frame">
+                <img class="team-logo-image" src="${team.logo}" alt="${team.logoAlt || `${team.name} logo`}" loading="lazy" decoding="async" />
+              </div>
+            `
+            : "";
+
           return `
             <article class="team-card reveal" style="transition-delay: ${index * 45}ms">
               <div class="team-card-top">
-                <span class="team-seed">${team.seed}</span>
-                <div class="team-title-block">
-                  <p class="team-label">Roster</p>
-                  <h2>${team.name}</h2>
+                <div class="team-card-heading">
+                  <span class="team-seed">${team.seed}</span>
+                  <div class="team-title-block">
+                    <p class="team-label">Roster</p>
+                    <h2>${team.name}</h2>
+                  </div>
                 </div>
+                ${teamLogo}
               </div>
               ${captainMarkup}
               <ul class="team-roster-list" aria-label="${team.name} roster">
