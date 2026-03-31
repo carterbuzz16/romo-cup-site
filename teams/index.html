@@ -263,11 +263,6 @@
               </div>
             `
             : "";
-          const rosterTotal =
-            team.roster.length === 1 && team.roster[0] === "TBD"
-              ? "Roster TBD"
-              : `${team.roster.length + (team.captain ? 1 : 0)} Total`;
-
           const teamLogo = team.logo
             ? `
               <div class="team-logo-frame">
@@ -294,7 +289,6 @@
                 ${rosterItems}
               </ul>
               <div class="team-card-bottom">
-                <span class="team-count">${rosterTotal}</span>
                 <span class="team-card-mark">Seed ${team.seed}</span>
               </div>
             </article>
