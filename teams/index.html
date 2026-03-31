@@ -133,7 +133,26 @@
             "DH: Pete Stavros"
           ]
         },
-        { name: "SNU", seed: "02", logo: "/assets/images/team-logos/snu.png", logoAlt: "Sigma Nu crest", captain: null, roster: ["TBD"] },
+                {
+          name: "Sigma Nu",
+          seed: "02",
+          logo: "/assets/images/team-logos/snu.png",
+          logoAlt: "Sigma Nu crest",
+          coaches: "Walker Willcox & Griff Stanley",
+          captain: "Will Hamilton",
+          roster: [
+            "John Hendry",
+            "Owen Beaverstock",
+            "Will Mallvaine",
+            "Drew Seymore",
+            "Jon Durham",
+            "Montgomery Freeman",
+            "Jack Lynd",
+            "Griffin McGhee",
+            "William Taylor",
+            "Sam Matthews"
+          ]
+        },
         { name: "FIJI", seed: "03", logo: "/assets/images/team-logos/fiji.png", logoAlt: "FIJI crest", captain: null, roster: ["TBD"] },
         { name: "KA", seed: "04", logo: "/assets/images/team-logos/ka.jpg", logoAlt: "Kappa Alpha crest", captain: null, roster: ["TBD"] },
         {
@@ -228,6 +247,14 @@
           const rosterItems = team.roster
             .map((player) => `<li class="team-roster-item">${player}</li>`)
             .join("");
+          const coachesMarkup = team.coaches
+            ? `
+              <div class="team-support-block">
+                <span class="team-captain-label">Coaches</span>
+                <p class="team-captain-name">${team.coaches}</p>
+              </div>
+            `
+            : "";
           const captainMarkup = team.captain
             ? `
               <div class="team-captain-block">
@@ -261,6 +288,7 @@
                 </div>
                 ${teamLogo}
               </div>
+              ${coachesMarkup}
               ${captainMarkup}
               <ul class="team-roster-list" aria-label="${team.name} roster">
                 ${rosterItems}

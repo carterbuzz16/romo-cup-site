@@ -2591,6 +2591,14 @@ body {
   background: linear-gradient(135deg, rgba(255, 106, 19, 0.1), rgba(7, 36, 95, 0.04));
 }
 
+.team-support-block {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(7, 36, 95, 0.1);
+  background: linear-gradient(135deg, rgba(7, 36, 95, 0.05), rgba(16, 58, 134, 0.04));
+}
+
 .team-captain-label {
   display: inline-block;
   margin-bottom: 6px;
