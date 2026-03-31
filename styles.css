@@ -2854,6 +2854,60 @@ body {
   gap: 10px;
 }
 
+
+.bullpen-sponsor-stack {
+  max-width: 100%;
+}
+
+.tier-sponsor-logo-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 106, 19, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.98));
+  box-shadow: 0 14px 28px rgba(8, 31, 84, 0.08);
+}
+
+.tier-sponsor-logo-wrap {
+  display: grid;
+  place-items: center;
+  min-height: 92px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(7, 36, 95, 0.08);
+  background: #ffffff;
+}
+
+.tier-sponsor-logo {
+  width: 100%;
+  max-width: 310px;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.tier-sponsor-name {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .tier-sponsor-logo-card {
+    padding: 12px;
+  }
+
+  .tier-sponsor-logo-wrap {
+    min-height: 84px;
+    padding: 10px 12px;
+  }
+
+  .tier-sponsor-logo {
+    max-height: 48px;
+  }
+}
+
 /* Layout breathing room pass */
 .hero-inner,
 .teams-hero,
