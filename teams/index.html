@@ -316,7 +316,12 @@
         })
         .join("");
 
-      if ("IntersectionObserver" in window) {
+      const revealEls = document.querySelectorAll(".reveal");
+      const shouldBypassReveal = window.matchMedia("(max-width: 900px)").matches;
+
+      if (shouldBypassReveal || !("IntersectionObserver" in window)) {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+      } else {
         const revealObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -326,12 +331,20 @@
               }
             });
           },
-          { threshold: 0.14 }
+          {
+            threshold: 0.05,
+            rootMargin: "0px 0px -8% 0px"
+          }
         );
 
-        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-      } else {
-        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+        revealEls.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.92) {
+            el.classList.add("is-visible");
+          } else {
+            revealObserver.observe(el);
+          }
+        });
       }
     </script>
   </body>
