@@ -1136,6 +1136,12 @@ small,
   padding-top: 34px;
 }
 
+.teams-page .main-content,
+.teams-page .team-grid,
+.teams-page .team-card {
+  overflow: visible;
+}
+
 .teams-page .team-grid {
   display: grid;
   gap: 22px;
@@ -1328,6 +1334,8 @@ small,
   }
 
   .team-card-top {
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
     margin-bottom: 16px;
     padding-bottom: 14px;
@@ -1338,8 +1346,9 @@ small,
   }
 
   .team-logo-frame {
-    width: 72px;
-    height: 72px;
+    align-self: flex-start;
+    width: 68px;
+    height: 68px;
     padding: 8px;
     border-radius: 16px;
   }

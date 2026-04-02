@@ -154,7 +154,27 @@
           ]
         },
         { name: "FIJI", seed: "03", logo: "/assets/images/team-logos/fiji.png", logoAlt: "FIJI crest", captain: null, roster: ["TBD"] },
-        { name: "KA", seed: "04", logo: "/assets/images/team-logos/ka.jpg", logoAlt: "Kappa Alpha crest", captain: null, roster: ["TBD"] },
+                {
+          name: "KA",
+          seed: "04",
+          logo: "/assets/images/team-logos/ka.jpg",
+          logoAlt: "Kappa Alpha crest",
+          captain: null,
+          roster: [
+            "3B: Thomas Aaron",
+            "2B: Louis Pickett",
+            "1B: Madden Dismukes",
+            "P: Dean Walker",
+            "LF: Chapel Stickler",
+            "C: Fletcher Shirley",
+            "SS: Jack Elliot",
+            "RF: Harrison Mims",
+            "CF: Bray Renfroe",
+            "DH: Will Cox",
+            "DH: William Perry",
+            "DH: Culli Cain"
+          ]
+        },
         {
           name: "FH",
           seed: "05",
@@ -296,19 +316,23 @@
         })
         .join("");
 
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.14 }
-      );
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.14 }
+        );
 
-      document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+      } else {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      }
     </script>
   </body>
 </html>
