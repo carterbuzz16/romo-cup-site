@@ -2976,6 +2976,25 @@ body {
   max-height: 58px;
 }
 
+.tier-sponsor-logo-wrap-climate {
+  min-height: 110px;
+  padding: 8px 12px;
+}
+
+.tier-sponsor-logo-climate {
+  max-width: 100%;
+  max-height: 74px;
+}
+
+.tier-sponsor-logo-wrap-mathison {
+  min-height: 96px;
+}
+
+.tier-sponsor-logo-mathison {
+  max-width: 100%;
+  max-height: 58px;
+}
+
 @media (max-width: 640px) {
   .tier-sponsor-logo-grid {
     grid-template-columns: 1fr;
@@ -4445,6 +4464,23 @@ body {
   max-height: 54px;
 }
 
+.current-sponsor-logo-climate-wrap {
+  max-width: 260px;
+  min-height: 100px;
+}
+
+.current-sponsor-logo-climate {
+  max-height: 72px;
+}
+
+.current-sponsor-logo-mathison-wrap {
+  max-width: 220px;
+}
+
+.current-sponsor-logo-mathison {
+  max-height: 56px;
+}
+
 .bullpen-supporter-card {
   border-color: rgba(255, 106, 19, 0.16);
 }
@@ -5011,5 +5047,43 @@ body {
 
   .faq-cta-actions {
     width: 100%;
+  }
+}
+
+
+.tier-sponsor-group-secondary {
+  margin-top: 1rem;
+  padding-top: 0.25rem;
+}
+
+.chapter-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.chapter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.48rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid rgba(7, 36, 95, 0.12);
+  background: rgba(246, 249, 255, 0.96);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 640px) {
+  .chapter-chip-list {
+    gap: 0.55rem;
+  }
+
+  .chapter-chip {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.7rem;
   }
 }
