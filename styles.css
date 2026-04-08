@@ -4380,18 +4380,30 @@ body {
 .premium-supporter-card {
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 24px 28px;
+  gap: 16px;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 24px 28px;
   border-radius: 24px;
   border: 1px solid rgba(7, 36, 95, 0.1);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.98));
   box-shadow: 0 18px 32px rgba(8, 31, 84, 0.08);
 }
 
+.premium-supporter-card > div:last-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .premium-supporter-card h3 {
   margin: 0 0 6px;
   color: var(--primary);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .premium-supporter-card p,
@@ -4399,12 +4411,17 @@ body {
   margin: 0;
   color: var(--muted);
   font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 
 .current-sponsor-logo-image-wrap {
-  flex: 0 0 220px;
-  width: 220px;
+  flex: 0 0 120px;
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
   min-height: 110px;
   display: flex;
   align-items: center;
@@ -4413,6 +4430,7 @@ body {
   border-radius: 20px;
   background: #ffffff;
   border: 1px solid rgba(10, 30, 70, 0.08);
+  box-sizing: border-box;
 }
 
 .current-sponsor-logo-image {
@@ -4424,11 +4442,13 @@ body {
 }
 
 .current-sponsor-logo-wide-wrap {
-  flex-basis: 240px;
-  width: 240px;
-  max-width: 240px;
+  flex: 0 0 120px;
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
   min-height: 110px;
   padding: 18px;
+  box-sizing: border-box;
 }
 
 .current-sponsor-logo-wide {
@@ -4438,9 +4458,10 @@ body {
 }
 
 .current-sponsor-logo-climate-wrap {
-  flex-basis: 260px;
-  width: 260px;
-  max-width: 260px;
+  flex: 0 0 120px;
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
   min-height: 122px;
 }
 
@@ -4449,7 +4470,7 @@ body {
 }
 
 .current-sponsor-logo-mathison-wrap {
-  max-width: 240px;
+  max-width: 120px;
 }
 
 .current-sponsor-logo-mathison {
@@ -4531,8 +4552,8 @@ body {
   .premium-supporter-card {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    padding: 18px;
+    gap: 12px;
+    padding: 18px 16px;
   }
 
   .tier-supporter-card {
@@ -4543,11 +4564,12 @@ body {
   .current-sponsor-logo-image-wrap,
   .current-sponsor-logo-wide-wrap,
   .sponsor-placeholder-mark {
-    width: 140px;
-    max-width: 140px;
+    width: 95px;
+    max-width: 95px;
+    min-width: 95px;
     min-height: 90px;
-    flex-basis: 140px;
-    padding: 14px;
+    flex-basis: 95px;
+    padding: 12px;
   }
 
   .current-sponsor-logo-image,
