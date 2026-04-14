@@ -4516,6 +4516,28 @@ body {
   max-height: 64px;
 }
 
+.current-sponsor-logo-chptr-wrap {
+  flex-basis: 120px;
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.current-sponsor-logo-chptr {
+  max-height: 70px;
+}
+
+.tier-supporter-card-logo-only .current-sponsor-logo-chptr-wrap {
+  flex: 0 0 240px;
+  width: 240px;
+  max-width: 240px;
+  min-width: 240px;
+}
+
+.tier-supporter-card-logo-only .current-sponsor-logo-chptr {
+  max-height: 84px;
+}
+
 .bullpen-supporter-card {
   border-color: rgba(255, 106, 19, 0.16);
 }
